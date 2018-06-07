@@ -6,7 +6,8 @@ dim_size = 100
 
 
 def minimize_ackley_continuous_noisy():
-    es = cma.CMAEvolutionStrategy(100*[0], 0.3)  #doctest: +ELLIPSIS
+    init_pos = [np.random.uniform(-1, 1) for _ in range(dim_size)]
+    es = cma.CMAEvolutionStrategy(init_pos, 0.3)  #doctest: +ELLIPSIS
     nh = cma.NoiseHandler(es.N, maxevals=[1, 1, 30])
     while get_epoch_cnt() < 1:
          X, fit_vals = es.ask_and_eval(ackley_noise_log, evaluations=nh.evaluations)

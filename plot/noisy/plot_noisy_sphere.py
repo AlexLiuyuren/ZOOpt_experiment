@@ -5,16 +5,14 @@ from plot.get_ave_std import get_ave_std
 
 if __name__ == '__main__':
     ZOOpt_data = np.loadtxt('ZOOpt_exp/log/sphere_noisy_ave_std.txt')
-    ave_zoopt = ZOOpt_data[0]
-    std_zoopt = ZOOpt_data[1]
+    ave_zoopt = ZOOpt_data[0][25000:]
+    std_zoopt = ZOOpt_data[1][25000:]
     CMAES_data = np.loadtxt('CMAES_exp/log/sphere_noisy_ave_std.txt')
     ave_CMAES = CMAES_data[0][25000:]
     std_CMAES = CMAES_data[1][25000:]
-    print(ave_CMAES.shape)
-    print(std_CMAES.shape)
-    # [ave_zoopt, std_zoopt] = np.loadtxt('ZOOpt_exp/log/sphere_noisy_ave_std.txt', 10)
-    ave_zoopt = ave_zoopt[25000:]
-    std_zoopt = std_zoopt[25000:]
+    DEAP_data = np.loadtxt('DEAP_exp/log/sphere_noisy_ave_std.txt')
+    ave_DEAP = DEAP_data[0][25000:]
+    std_DEAP = DEAP_data[1][25000:]
     evals=[25000, 50000, 75000, 100000, 125000, 150000, 175000, 200000]
     #ZOOpt
     a1=[2.6647921151131562, 1.9322846854562681, 1.4877054408121257, 1.2713220829583673, 1.1570947653424699, 1.0919525689517584, 1.0208155279557765, 0.94517000277692342]
@@ -71,10 +69,12 @@ if __name__ == '__main__':
     plt.plot(x, ave_zoopt, 'r-', label='ZOOpt')
     plt.fill_between(x, ave_CMAES - std_CMAES, ave_CMAES + std_CMAES, facecolor='green', alpha=0.5)
     plt.plot(x, ave_CMAES, 'g-', label='CMAES')
+    plt.fill_between(x, ave_DEAP - std_DEAP, ave_DEAP + std_DEAP, facecolor='blue', alpha=0.5)
+    plt.plot(x, ave_DEAP, 'b-', label='DEAP')
     # plt.fill_between(evals, sp2 - sp2_std, sp2 + sp2_std, facecolor='green', alpha=0.5)
     # plt.plot(evals, sp2, 'g-', label='CMA-ES')
-    plt.fill_between(evals, sp3 - sp3_std, sp3 + sp3_std, facecolor='blue', alpha=0.5)
-    plt.plot(evals, sp3, 'b-', label='DEAP_exp')
+    # plt.fill_between(evals, sp3 - sp3_std, sp3 + sp3_std, facecolor='blue', alpha=0.5)
+    # plt.plot(evals, sp3, 'b-', label='DEAP_exp')
     # plt.errorbar(evals,sp2,yerr=sp2_std,label='CMA-ES',color='blue',fmt='-')
     # plt.errorbar(evals,sp3,yerr=sp3_std,label='DEAP_exp',color='black',fmt='-')
     #plt.fill_between(evals,a1-a1_std,a1+a1_std,facecolor='red',alpha=0.3)

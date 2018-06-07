@@ -63,6 +63,7 @@ def get_epoch_cnt():
 
 
 def sphere_noise_log(x):
+    # print(x)
     result = sphere_noisy(x)
     true_result = sphere(x)
     global all_epoch, true_epoch, pcount, epoch_cnt, best_result
@@ -75,6 +76,7 @@ def sphere_noise_log(x):
     if pcount == epoch_len:
         all_epoch.append(true_epoch[:epoch_len])
         epoch_cnt += 1
+    # print(len(true_epoch))
     return result
 
 

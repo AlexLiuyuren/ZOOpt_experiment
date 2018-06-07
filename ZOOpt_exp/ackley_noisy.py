@@ -1,5 +1,6 @@
 from objective_function.noisy_function import sphere_noise_zoopt, ackley_noise_zoopt, clear_noisy_global, \
     get_all_epoch, get_epoch_cnt
+from objective_function.base_function import set_optimal_position
 from zoopt import Opt, Objective, Dimension, Parameter
 from zoopt.utils.zoo_global import gl
 import numpy as np
@@ -7,6 +8,8 @@ import numpy as np
 
 if __name__ == '__main__':
     repeat_num = 10
+    set_optimal_position(
+        "/Users/liu/Desktop/CS/ZOOpt_exp/ZOOpt_experiment/objective_function/optimal_position/ackley_100.txt")
     gl.set_seed(666)
     for i in range(repeat_num):
         dim_size = 100  # dimensions

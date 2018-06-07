@@ -1,4 +1,4 @@
-from base_function import sphere, ackley
+from objective_function.base_function import sphere, ackley
 import numpy as np
 
 
@@ -50,6 +50,7 @@ def ackley_log(x):
     if pcount == epoch_len:
         all_epoch.append(epoch[:epoch_len])
         epoch_cnt += 1
+    # print(len(epoch))
     return result
 
 

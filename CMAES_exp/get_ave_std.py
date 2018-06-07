@@ -18,6 +18,12 @@ def get_ave_std(filename, line):
 
 if __name__ == '__main__':
     line = 10
-    result = get_ave_std('CMAES_exp/log/ackley_noisy.txt', line)
-    np.savetxt('CMAES_exp/log/ackley_noisy_ave_std.txt', result)
+    # result = get_ave_std('CMAES_exp/log/sphere_noisy.txt', line)
+    # np.savetxt('CMAES_exp/log/sphere_noisy_ave_std.txt', result)
+    # result = get_ave_std('CMAES_exp/log/ackley_noisy.txt', line)
+    # np.savetxt('CMAES_exp/log/ackley_noisy_ave_std.txt', result)
+    # result = get_ave_std('CMAES_exp/log/ackley_20.txt', line)
+    # np.savetxt('CMAES_exp/log/ackley_20_ave_std.txt', result)
+    result = get_ave_std('CMAES_exp/log/sphere_20.txt', line)
+    np.savetxt('CMAES_exp/log/sphere_20_ave_std.txt', result)
 
