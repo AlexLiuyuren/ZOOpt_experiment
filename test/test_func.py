@@ -7,4 +7,5 @@ def add_cnt():
 
 
 def get_cnt():
+    print(cnt)
     return cnt
