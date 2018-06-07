@@ -2,21 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d9d1730-8a98-4edc-b0b2-6160303766f6" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/DEAP/ackley_noise.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/DEAP/sphere_noise.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/hyperopt/ackley_20.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/hyperopt/sphere_20.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/hyperopt/test.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/objective_function/base_function.py" />
-      <change beforePath="$PROJECT_DIR$/.idea/Task.iml" afterPath="$PROJECT_DIR$/.idea/Task.iml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/DEAP_exp/get_ave_std.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/DEAP_exp/log/sphere_noisy.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/objective_function/ordinary_function.py" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/CMAES_exp/get_noisy_ackley.py" afterPath="$PROJECT_DIR$/CMAES_exp/ackley_noisy.py" />
-      <change beforePath="$PROJECT_DIR$/CMAES_exp/get_noisy_sphere.py" afterPath="$PROJECT_DIR$/CMAES_exp/sphere_noisy.py" />
-      <change beforePath="$PROJECT_DIR$/ZOOpt_exp/get_noisy_ackley.py" afterPath="$PROJECT_DIR$/ZOOpt_exp/ackley_noisy.py" />
-      <change beforePath="$PROJECT_DIR$/ZOOpt_exp/get_noisy_sphere.py" afterPath="$PROJECT_DIR$/ZOOpt_exp/sphere_noisy.py" />
-      <change beforePath="$PROJECT_DIR$/mytest/test.py" afterPath="$PROJECT_DIR$/test/test.py" />
-      <change beforePath="$PROJECT_DIR$/mytest/test_func.py" afterPath="$PROJECT_DIR$/test/test_func.py" />
-      <change beforePath="$PROJECT_DIR$/objective_function/objective_function.py" afterPath="$PROJECT_DIR$/objective_function/noisy_function.py" />
+      <change beforePath="$PROJECT_DIR$/CMAES_exp/sphere_noisy.py" afterPath="$PROJECT_DIR$/CMAES_exp/sphere_noisy.py" />
+      <change beforePath="$PROJECT_DIR$/DEAP/ackley_noise.py" afterPath="$PROJECT_DIR$/DEAP_exp/ackley_noise.py" />
+      <change beforePath="$PROJECT_DIR$/DEAP/log/sphere_noisy.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/DEAP/sphere_noise.py" afterPath="$PROJECT_DIR$/DEAP_exp/sphere_noise.py" />
+      <change beforePath="$PROJECT_DIR$/ZOOpt_exp/ackley_noisy.py" afterPath="$PROJECT_DIR$/ZOOpt_exp/ackley_noisy.py" />
+      <change beforePath="$PROJECT_DIR$/hyperopt/ackley_20.py" afterPath="$PROJECT_DIR$/hyperopt/ackley_20.py" />
+      <change beforePath="$PROJECT_DIR$/objective_function/base_function.py" afterPath="$PROJECT_DIR$/objective_function/base_function.py" />
+      <change beforePath="$PROJECT_DIR$/plot/noisy/plot_noisy_ackley.py" afterPath="$PROJECT_DIR$/plot/noisy/plot_noisy_ackley.py" />
+      <change beforePath="$PROJECT_DIR$/plot/noisy/plot_noisy_sphere.py" afterPath="$PROJECT_DIR$/plot/noisy/plot_noisy_sphere.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -39,8 +37,8 @@
       <file leaf-file-name="noisy_function.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/objective_function/noisy_function.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-423">
-              <caret line="48" column="20" lean-forward="true" selection-start-line="48" selection-start-column="20" selection-end-line="48" selection-end-column="20" />
+            <state relative-caret-position="632">
+              <caret line="101" column="17" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="101" selection-end-column="17" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -63,75 +61,50 @@
       <file leaf-file-name="sphere_noisy.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CMAES_exp/sphere_noisy.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="24" lean-forward="false" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="24" />
-              <folding>
-                <element signature="e#0#112#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sphere_noisy.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CMAES_exp/log/sphere_noisy.txt">
-          <provider selected="true" editor-type-id="LargeFileEditor">
-            <state relative-caret-position="165">
-              <caret line="0" column="1441" lean-forward="false" selection-start-line="0" selection-start-column="1441" selection-end-line="0" selection-end-column="1441" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ackley_noisy.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CMAES_exp/ackley_noisy.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="10" lean-forward="false" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
+            <state relative-caret-position="0">
+              <caret line="0" column="14" lean-forward="false" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ackley_noise.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/DEAP/ackley_noise.py">
+      <file leaf-file-name="ackley_20.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hyperopt/ackley_20.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="86" column="24" lean-forward="true" selection-start-line="86" selection-start-column="24" selection-end-line="86" selection-end-column="24" />
+            <state relative-caret-position="105">
+              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding>
-                <element signature="e#0#15#0" expanded="true" />
+                <element signature="e#0#34#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ackley_noisy.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ZOOpt_exp/ackley_noisy.py">
+      <file leaf-file-name="get_ave_std.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ZOOpt_exp/get_ave_std.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="134">
-              <caret line="9" column="20" lean-forward="true" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
-              <folding>
-                <element signature="e#0#140#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="270">
+              <caret line="18" column="26" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sphere_noise.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DEAP/sphere_noise.py">
+      <file leaf-file-name="get_ave_std.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/DEAP_exp/get_ave_std.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="30" lean-forward="false" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="180">
+              <caret line="12" column="33" lean-forward="false" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sphere_noisy.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DEAP/log/sphere_noisy.txt">
+      <file leaf-file-name="sphere_20.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hyperopt/sphere_20.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="0" column="1391" lean-forward="true" selection-start-line="0" selection-start-column="1391" selection-end-line="0" selection-end-column="1391" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -140,9 +113,21 @@
       <file leaf-file-name="base_function.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/objective_function/base_function.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
-              <caret line="28" column="18" lean-forward="false" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
+            <state relative-caret-position="135">
+              <caret line="9" column="27" lean-forward="false" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ordinary_function.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/objective_function/ordinary_function.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="10" lean-forward="false" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
+              <folding>
+                <element signature="e#0#40#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -162,6 +147,7 @@
       <find>ackley</find>
       <find>numpy</find>
       <find>sphere</find>
+      <find>budget</find>
     </findStrings>
     <replaceStrings>
       <replace>np</replace>
@@ -201,14 +187,19 @@
         <option value="$PROJECT_DIR$/ZOOpt_exp/get_ave_std.py" />
         <option value="$PROJECT_DIR$/hyperopt/test.py" />
         <option value="$PROJECT_DIR$/hyperopt/sphere_20.py" />
-        <option value="$PROJECT_DIR$/hyperopt/ackley_20.py" />
         <option value="$PROJECT_DIR$/mytest/test_func.py" />
         <option value="$PROJECT_DIR$/mytest/test.py" />
         <option value="$PROJECT_DIR$/ZOOpt_exp/sphere_noisy.py" />
-        <option value="$PROJECT_DIR$/objective_function/noisy_function.py" />
-        <option value="$PROJECT_DIR$/objective_function/base_function.py" />
+        <option value="$PROJECT_DIR$/ZOOpt_exp/ackley_noisy.py" />
+        <option value="$PROJECT_DIR$/CMAES_exp/sphere_noisy.py" />
         <option value="$PROJECT_DIR$/DEAP/sphere_noise.py" />
         <option value="$PROJECT_DIR$/DEAP/ackley_noise.py" />
+        <option value="$PROJECT_DIR$/DEAP_exp/ackley_noise.py" />
+        <option value="$PROJECT_DIR$/objective_function/noisy_function.py" />
+        <option value="$PROJECT_DIR$/objective_function/base_function.py" />
+        <option value="$PROJECT_DIR$/objective_function/ordinary_function.py" />
+        <option value="$PROJECT_DIR$/hyperopt/ackley_20.py" />
+        <option value="$PROJECT_DIR$/DEAP_exp/get_ave_std.py" />
       </list>
     </option>
   </component>
@@ -252,18 +243,17 @@
             <path>
               <item name="ZOOpt_experiment" type="b2602c69:ProjectViewProjectNode" />
               <item name="ZOOpt_experiment" type="462c0819:PsiDirectoryNode" />
-              <item name="DEAP" type="462c0819:PsiDirectoryNode" />
+              <item name="DEAP_exp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ZOOpt_experiment" type="b2602c69:ProjectViewProjectNode" />
               <item name="ZOOpt_experiment" type="462c0819:PsiDirectoryNode" />
-              <item name="DEAP" type="462c0819:PsiDirectoryNode" />
-              <item name="log" type="462c0819:PsiDirectoryNode" />
+              <item name="hyperopt" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ZOOpt_experiment" type="b2602c69:ProjectViewProjectNode" />
               <item name="ZOOpt_experiment" type="462c0819:PsiDirectoryNode" />
-              <item name="objective_function" type="462c0819:PsiDirectoryNode" />
+              <item name="plot" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ZOOpt_experiment" type="b2602c69:ProjectViewProjectNode" />
@@ -433,14 +423,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32992327" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.9603581" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32992327" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32992327" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32992327" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25716332" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Julia Document" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -469,24 +458,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/objective_function/optimal_position/ackley_50.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/objective_function/get_optimal_position.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="18" column="12" lean-forward="true" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
-          <folding>
-            <element signature="e#270#288#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/objective_function/optimal_position/ackley_20.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -707,40 +678,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hyperopt/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#34#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hyperopt/ackley_20.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hyperopt/sphere_20.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ZOOpt_exp/get_ave_std.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CMAES_exp/get_ave_std.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -765,10 +702,87 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/CMAES_exp/log/sphere_noisy.txt">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state relative-caret-position="165">
+          <caret line="0" column="1441" lean-forward="false" selection-start-line="0" selection-start-column="1441" selection-end-line="0" selection-end-column="1441" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DEAP_exp/log/sphere_noisy.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="0" column="889" lean-forward="true" selection-start-line="0" selection-start-column="889" selection-end-line="0" selection-end-column="889" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DEAP_exp/ackley_noise.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="86" column="25" lean-forward="true" selection-start-line="86" selection-start-column="4" selection-end-line="86" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#15#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DEAP_exp/sphere_noise.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="91" column="26" lean-forward="true" selection-start-line="91" selection-start-column="26" selection-end-line="91" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#15#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ZOOpt_exp/ackley_noisy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="26" column="38" lean-forward="true" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#140#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/CMAES_exp/ackley_noisy.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="10" lean-forward="false" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hyperopt/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#34#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hyperopt/sphere_20.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMAES_exp/sphere_noisy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="14" lean-forward="false" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
           <folding />
         </state>
       </provider>
@@ -783,51 +797,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CMAES_exp/sphere_noisy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="24" lean-forward="false" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#112#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CMAES_exp/log/sphere_noisy.txt">
-      <provider selected="true" editor-type-id="LargeFileEditor">
-        <state relative-caret-position="165">
-          <caret line="0" column="1441" lean-forward="false" selection-start-line="0" selection-start-column="1441" selection-end-line="0" selection-end-column="1441" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DEAP/log/sphere_noisy.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="0" column="1391" lean-forward="true" selection-start-line="0" selection-start-column="1391" selection-end-line="0" selection-end-column="1391" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ZOOpt_exp/ackley_noisy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="9" column="20" lean-forward="true" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#140#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/objective_function/noisy_function.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-423">
-          <caret line="48" column="20" lean-forward="true" selection-start-line="48" selection-start-column="20" selection-end-line="48" selection-end-column="20" />
+        <state relative-caret-position="632">
+          <caret line="101" column="17" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="101" selection-end-column="17" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
@@ -836,29 +809,45 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/objective_function/base_function.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="28" column="18" lean-forward="false" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
+        <state relative-caret-position="135">
+          <caret line="9" column="27" lean-forward="false" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DEAP/sphere_noise.py">
+    <entry file="file://$PROJECT_DIR$/objective_function/ordinary_function.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="30" lean-forward="false" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
+        <state relative-caret-position="105">
+          <caret line="7" column="10" lean-forward="false" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
           <folding>
-            <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#0#40#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DEAP/ackley_noise.py">
+    <entry file="file://$PROJECT_DIR$/hyperopt/ackley_20.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="86" column="24" lean-forward="true" selection-start-line="86" selection-start-column="24" selection-end-line="86" selection-end-column="24" />
+        <state relative-caret-position="105">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding>
-            <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#0#34#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ZOOpt_exp/get_ave_std.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="26" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DEAP_exp/get_ave_std.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="33" lean-forward="false" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
+          <folding />
         </state>
       </provider>
     </entry>

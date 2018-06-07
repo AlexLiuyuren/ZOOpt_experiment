@@ -40,7 +40,7 @@ if __name__ == '__main__':
     sc2=[18264.650272757106, 20571.501866846364, 19458.013468267691, 17878.753386651439, 17681.399906476821, 19880.713738862971, 20954.446265880804, 17041.851037781893]
     sc2_std=[5176.2395544973324, 4391.345840915702, 5279.3729128281484, 4942.2144158322517, 4578.2535847162417, 4765.1714410166323, 3834.5668106572657, 3941.956374269691]
 
-    #DEAP
+    #DEAP_exp
     a3=[3.8354091665851584, 3.7987863383780942, 3.835364434553898, 3.8085840614702584, 3.7934337545196435, 3.8046394361073097, 3.8093375661681939, 3.8172909679942046]
     a3_std=[0.056265023422061432, 0.0039993690135548769, 0.053717408400044353, 0.031773139453443476, 0.035456972897945339, 0.024397692731226554, 0.03077574678876837, 0.033517110516304682]
     sp3=[26.6838,23.07176,22.44436,22.59525,22.84757,23.031289,23.1353169,23.0763471]
@@ -74,15 +74,15 @@ if __name__ == '__main__':
     # plt.fill_between(evals, sp2 - sp2_std, sp2 + sp2_std, facecolor='green', alpha=0.5)
     # plt.plot(evals, sp2, 'g-', label='CMA-ES')
     plt.fill_between(evals, sp3 - sp3_std, sp3 + sp3_std, facecolor='blue', alpha=0.5)
-    plt.plot(evals, sp3, 'b-', label='DEAP')
+    plt.plot(evals, sp3, 'b-', label='DEAP_exp')
     # plt.errorbar(evals,sp2,yerr=sp2_std,label='CMA-ES',color='blue',fmt='-')
-    # plt.errorbar(evals,sp3,yerr=sp3_std,label='DEAP',color='black',fmt='-')
+    # plt.errorbar(evals,sp3,yerr=sp3_std,label='DEAP_exp',color='black',fmt='-')
     #plt.fill_between(evals,a1-a1_std,a1+a1_std,facecolor='red',alpha=0.3)
     #plt.plot(evals,a1,'r-',label='ZOOpt')
     #plt.fill_between(evals,a2-a2_std,a2+a2_std,facecolor='green',alpha=0.3)
     #plt.plot(evals,a2,'g-',label='CMA-ES')
     #plt.fill_between(evals,a3-a3_std,a3+a3_std,facecolor='blue',alpha=0.3)
-    #plt.plot(evals,a3,'b-',label='DEAP')
+    #plt.plot(evals,a3,'b-',label='DEAP_exp')
     plt.xlabel('budget')
     plt.ylabel('error')
     plt.title('Sphere,dim=100,sigma=1.0')

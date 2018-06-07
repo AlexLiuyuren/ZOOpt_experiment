@@ -37,3 +37,4 @@ def ackley(x):
     ave_cos = cos / x_len
     value = -20 * np.exp(-0.2 * np.sqrt(ave_seq)) - np.exp(ave_cos) + 20.0 + np.e
     return value
+

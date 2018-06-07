@@ -6,7 +6,9 @@ dim_size = 100
 
 
 def minimize_sphere_continuous_noisy():
-    es = cma.CMAEvolutionStrategy(100*[0], 0.3)  #doctest: +ELLIPSIS
+    init_pos = [np.random.uniform(-1, 1) for _ in range(dim_size)]
+    print(init_pos)
+    es = cma.CMAEvolutionStrategy(init_pos, 0.3)  #doctest: +ELLIPSsIS
     nh = cma.NoiseHandler(es.N, maxevals=[1, 1, 30])
     while get_epoch_cnt() < 1:
          X, fit_vals = es.ask_and_eval(sphere_noise_log, evaluations=nh.evaluations)
