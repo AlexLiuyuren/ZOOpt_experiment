@@ -7,12 +7,16 @@ if __name__ == '__main__':
     ZOOpt_data = np.loadtxt('ZOOpt_exp/log/sphere_noisy_ave_std.txt')
     ave_zoopt = ZOOpt_data[0][25000:]
     std_zoopt = ZOOpt_data[1][25000:]
+    ZOOpt_data_without_nh = np.loadtxt('ZOOpt_exp/log/sphere_noisy_no_ave_std.txt')
+    ave_without_nh_zoopt = ZOOpt_data_without_nh[0][25000:]
+    std_without_nh_zoopt = ZOOpt_data_without_nh[1][25000:]
     CMAES_data = np.loadtxt('CMAES_exp/log/sphere_noisy_ave_std.txt')
     ave_CMAES = CMAES_data[0][25000:]
     std_CMAES = CMAES_data[1][25000:]
     DEAP_data = np.loadtxt('DEAP_exp/log/sphere_noisy_ave_std.txt')
     ave_DEAP = DEAP_data[0][25000:]
     std_DEAP = DEAP_data[1][25000:]
+
     evals=[25000, 50000, 75000, 100000, 125000, 150000, 175000, 200000]
     #ZOOpt
     a1=[2.6647921151131562, 1.9322846854562681, 1.4877054408121257, 1.2713220829583673, 1.1570947653424699, 1.0919525689517584, 1.0208155279557765, 0.94517000277692342]
@@ -65,26 +69,20 @@ if __name__ == '__main__':
     x = np.arange(25000, 200000, 1)
     print(len(x))
     print(len(ave_zoopt))
-    plt.fill_between(x, ave_zoopt - std_zoopt, ave_zoopt + std_zoopt, facecolor='red', alpha=0.5)
-    plt.plot(x, ave_zoopt, 'r-', label='ZOOpt')
-    plt.fill_between(x, ave_CMAES - std_CMAES, ave_CMAES + std_CMAES, facecolor='green', alpha=0.5)
-    plt.plot(x, ave_CMAES, 'g-', label='CMAES')
+    plt.fill_between(x, ave_zoopt - std_zoopt, ave_zoopt + std_zoopt, facecolor='c', alpha=0.5)
+    plt.plot(x, ave_zoopt, '-', color='c', label='ZOOpt-nh')
+    plt.fill_between(x, ave_without_nh_zoopt - std_without_nh_zoopt, ave_without_nh_zoopt + std_without_nh_zoopt,
+                     facecolor='red', alpha=0.5)
+    plt.plot(x, ave_without_nh_zoopt, 'r-', label='ZOOpt')
+    plt.fill_between(x, ave_CMAES - std_CMAES, ave_CMAES + std_CMAES, facecolor='tan', alpha=0.5)
+    plt.plot(x, ave_CMAES, '-',color='tan', label='CMAES-nh')
     plt.fill_between(x, ave_DEAP - std_DEAP, ave_DEAP + std_DEAP, facecolor='blue', alpha=0.5)
     plt.plot(x, ave_DEAP, 'b-', label='DEAP')
-    # plt.fill_between(evals, sp2 - sp2_std, sp2 + sp2_std, facecolor='green', alpha=0.5)
-    # plt.plot(evals, sp2, 'g-', label='CMA-ES')
-    # plt.fill_between(evals, sp3 - sp3_std, sp3 + sp3_std, facecolor='blue', alpha=0.5)
-    # plt.plot(evals, sp3, 'b-', label='DEAP_exp')
-    # plt.errorbar(evals,sp2,yerr=sp2_std,label='CMA-ES',color='blue',fmt='-')
-    # plt.errorbar(evals,sp3,yerr=sp3_std,label='DEAP_exp',color='black',fmt='-')
-    #plt.fill_between(evals,a1-a1_std,a1+a1_std,facecolor='red',alpha=0.3)
-    #plt.plot(evals,a1,'r-',label='ZOOpt')
-    #plt.fill_between(evals,a2-a2_std,a2+a2_std,facecolor='green',alpha=0.3)
-    #plt.plot(evals,a2,'g-',label='CMA-ES')
-    #plt.fill_between(evals,a3-a3_std,a3+a3_std,facecolor='blue',alpha=0.3)
-    #plt.plot(evals,a3,'b-',label='DEAP_exp')
+    
     plt.xlabel('budget')
     plt.ylabel('error')
-    plt.title('Sphere,dim=100,sigma=1.0')
+    plt.title('Sphere, dim=100, sigma=1.0')
+    # plt.xlim(xmin=0)
+    plt.ylim(ymin=0)
     plt.legend()
     plt.savefig('plot/img/sphere_noisy.pdf', dpi=400)

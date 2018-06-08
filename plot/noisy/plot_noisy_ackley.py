@@ -7,6 +7,9 @@ if __name__ == '__main__':
     ZOOpt_data = np.loadtxt('ZOOpt_exp/log/ackley_noisy_ave_std.txt')
     ave_zoopt = ZOOpt_data[0][25000:]
     std_zoopt = ZOOpt_data[1][25000:]
+    ZOOpt_data_without_nh = np.loadtxt('ZOOpt_exp/log/ackley_noisy_no_ave_std.txt')
+    ave_without_nh_zoopt = ZOOpt_data_without_nh[0][25000:]
+    std_without_nh_zoopt = ZOOpt_data_without_nh[1][25000:]
     CMAES_data = np.loadtxt('CMAES_exp/log/ackley_noisy_ave_std.txt')
     ave_CMAES = CMAES_data[0][25000:]
     std_CMAES = CMAES_data[1][25000:]
@@ -63,11 +66,14 @@ if __name__ == '__main__':
     a3_std=np.array(a3_std)
     #plot
     x = np.arange(25000, 200000, 1)
-    print(std_CMAES[:10])
-    plt.fill_between(x, ave_zoopt - std_zoopt, ave_zoopt + std_zoopt, facecolor='red', alpha=0.5)
-    plt.plot(x, ave_zoopt, 'r-', label='ZOOpt')
-    plt.fill_between(x, ave_CMAES - std_CMAES, ave_CMAES + std_CMAES, facecolor='green', alpha=0.5)
-    plt.plot(x, ave_CMAES, 'g-', label='CMAES')
+    # print(std_CMAES[:10])
+    plt.fill_between(x, ave_zoopt - std_zoopt, ave_zoopt + std_zoopt, facecolor='c', alpha=0.5)
+    plt.plot(x, ave_zoopt, '-', color='c', label='ZOOpt-nh')
+    plt.fill_between(x, ave_without_nh_zoopt - std_without_nh_zoopt, ave_without_nh_zoopt + std_without_nh_zoopt,
+                     facecolor='red', alpha=0.5)
+    plt.plot(x, ave_without_nh_zoopt, 'r-', label='ZOOpt')
+    plt.fill_between(x, ave_CMAES - std_CMAES, ave_CMAES + std_CMAES, facecolor='tan', alpha=0.5)
+    plt.plot(x, ave_CMAES, '-', color='tan', label='CMAES-nh')
     plt.fill_between(x, ave_DEAP - std_DEAP, ave_DEAP + std_DEAP, facecolor='blue', alpha=0.5)
     plt.plot(x, ave_DEAP, 'b-', label='DEAP')
     # plt.fill_between(evals, sp2 - sp2_std, sp2 + sp2_std, facecolor='green', alpha=0.5)
@@ -84,6 +90,8 @@ if __name__ == '__main__':
     #plt.plot(evals,a3,'b-',label='DEAP_exp')
     plt.xlabel('budget')
     plt.ylabel('error')
-    plt.title('ackley,dim=100,sigma=0.1')
+    plt.title('Ackley, dim=100, sigma=0.1')
+    # plt.xlim(xmin=0)
+    plt.ylim(ymin=0)
     plt.legend()
     plt.savefig('plot/img/ackley_noisy.pdf', dpi=400)
