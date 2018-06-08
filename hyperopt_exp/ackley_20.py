@@ -10,6 +10,6 @@ if __name__ == '__main__':
         x = fmin(ackley_log, space=[hp.uniform(str(dim), -1, 1) for dim in range(20)], algo=tpe.suggest, max_evals=2000)
         clear_noisy_global()
     all_epoch = np.array(get_all_epoch())
-    np.savetxt('hyperopt_exp/log/ackley_noisy.txt', all_epoch)
+    np.savetxt('hyperopt_exp/log/ackley_20.txt', all_epoch)
     print(all_epoch.shape)
 

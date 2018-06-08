@@ -1,5 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
+
+
 def read_data(filename):
     with open(filename) as f:
         lines = f.readlines()
@@ -9,77 +11,44 @@ def read_data(filename):
     return history_list
 
 
-history_list = read_data('D:/comparative experiment/zoopt/ackley_low_2000.txt')
-history_list=np.array(history_list)
-a1=read_data('D:/comparative experiment/zoopt/ackley_low_2000.txt')
-a1=np.array(a1)
-#a1=np.loadtxt('D:/comparative experiment/zoopt/ackley_low_2000.txt')
-s1=np.loadtxt('D:/comparative experiment/zoopt/zooptsphere.txt')
-a2=np.loadtxt('D:/comparative experiment/CMA-ES/cmaackley.txt')
-
-s2=np.loadtxt('D:/comparative experiment/CMA-ES/cmasphere.txt')
-a3=np.loadtxt('D:/comparative experiment/deap/deapackley.txt')
-s3=np.loadtxt('D:/comparative experiment/deap/deapsphere.txt')
-a4=np.loadtxt('D:/comparative experiment/scikit-optimize/skoptackley.txt')
-s4=np.loadtxt('D:/comparative experiment/scikit-optimize/skoptsphere.txt')
-for i in range(10):
-    a4[i][0]=4.3
-    s4[i][0]=12.3
-repeat=10
-meana1=[]
-stda1=[]
-meana2=[]
-stda2=[]
-meana3=[]
-stda3=[]
-meana4=[]
-stda4=[]
-for i in range(2000):
-    value1=[]
-    #value2=[]
-    value3=[]
-    value4=[]
-    for j in range(repeat):
-         value1.append(a1[j][i])
-    #     value2.append(a2[j][i])
-         value3.append(a3[j][i])
-         value4.append(a4[j][i])
-    meana1.append(np.mean(value1))
-    stda1.append(np.std(value1))
-    #meana2.append(np.mean(value2))
-    #stda2.append(np.std(value2))
-    meana3.append(np.mean(value3))
-    stda3.append(np.std(value3))
-    meana4.append(np.mean(value4))
-    stda4.append(np.std(value4))
-for i in range(166):
-    value2=[]
-    for j in range(repeat):
-         value2.append(a2[j][i])
-    meana2.append(np.mean(value2))
-    stda2.append(np.std(value2))
-
-x1=np.arange(12,2000,12)
-meana1=np.array(meana1)
-stda1=np.array(stda1)
-meana2=np.array(meana2)
-stda2=np.array(stda2)
-meana3=np.array(meana3)
-stda3=np.array(stda3)
-meana4=np.array(meana4)
-stda4=np.array(stda4)
-meana2=meana2+0.2
-x=np.arange(1,2001,1)
-plt.fill_between(x,meana1-stda1,meana1+stda1,facecolor='red',alpha=0.3)
-plt.plot(x,meana1,'r-',label='ZOOpt')
-plt.fill_between(x1,meana2-stda2,meana2+stda2,facecolor='green',alpha=0.3)
-plt.plot(x1,meana2,'g-',label='CMA-ES')
-plt.fill_between(x,meana3-stda3,meana3+stda3,facecolor='blue',alpha=0.3)
-plt.plot(x,meana3,'b-',label='DEAP')
-plt.fill_between(x,meana4-stda4,meana4+stda4,facecolor='black',alpha=0.3)
-plt.plot(x,meana4,'k-',label='Scikit-Optimize')
+a1 = np.loadtxt('/Users/liu/Desktop/CS/ZOOpt_exp/ZOOpt_experiment/ZOOpt_exp/log/sphere_20_ave_std.txt')
+a1_ave = a1[0]
+a1_std = a1[1]
+# print(len(a1_ave))
+a2 = np.loadtxt('/Users/liu/Desktop/CS/ZOOpt_exp/ZOOpt_experiment/CMAES_exp/log/sphere_20_ave_std.txt')
+a2_ave = a2[0]
+a2_std = a2[1]
+# print(len(a2_ave))
+a3 = np.loadtxt('/Users/liu/Desktop/CS/ZOOpt_exp/ZOOpt_experiment/DEAP_exp/log/sphere_20_ave_std.txt')
+a3_ave = a3[0]
+a3_std = a3[1]
+a4 = np.loadtxt('/Users/liu/Desktop/CS/ZOOpt_exp/ZOOpt_experiment/hyperopt_exp/log/sphere_20_ave_std.txt')
+a4_ave = a4[0]
+a4_std = a4[1]
+# a4=np.loadtxt('D:/comparative experiment/scikit-optimize/skoptackley.txt')
+# for i in range(10):
+#     a4[i][0] = 4.3
+repeat = 10
+meana1 = []
+stda1 = []
+meana2 = []
+stda2 = []
+x=np.arange(1, 2001, 1)
+# meana4=np.array(meana4)
+# stda4=np.array(stda4)
+# meana2=meana2+0.2
+plt.fill_between(x, a1_ave-a1_std, a1_ave+a1_std, facecolor='red', alpha=0.3)
+plt.plot(x, a1_ave,'r-', label='ZOOpt')
+plt.fill_between(x, a2_ave-a2_std, a2_ave+a2_std, facecolor='green', alpha=0.3)
+plt.plot(x, a2_ave,'g-', label='CMA-ES')
+plt.fill_between(x, a3_ave-a3_std, a3_ave+a3_std, facecolor='blue', alpha=0.3)
+plt.plot(x, a3_ave, 'b-', label='DEAP')
+plt.fill_between(x, a4_ave-a4_std, a4_ave+a4_std, facecolor='orange', alpha=0.3)
+plt.plot(x, a4_ave, '-', color='orange', label='Hyperopt')
+# plt.fill_between(x, a4_ave-stda4,meana4+stda4,facecolor='black',alpha=0.3)
+# plt.plot(x,meana4,'k-',label='Scikit-Optimize')
 plt.xlabel('budget')
 plt.ylabel('error')
-plt.title('Ackley,dimension=20')
+plt.title('Sphere,dimension=20')
 plt.legend()
-plt.savefig('D:/comparative experiment/final2/lowdim_ackley.pdf',dpi=400)
+plt.savefig('/Users/liu/Desktop/CS/ZOOpt_exp/ZOOpt_experiment/plot/img/sphere_20.pdf', dpi=400)

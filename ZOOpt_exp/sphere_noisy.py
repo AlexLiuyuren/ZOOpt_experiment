@@ -29,6 +29,6 @@ if __name__ == '__main__':
         sol = Opt.min(objective, parameter)
         clear_noisy_global()
     all_epoch = np.array(get_all_epoch())
-    np.savetxt('ZOOpt_exp/log/sphere_noisy.txt', all_epoch)
+    np.savetxt('ZOOpt_exp/log/sphere_20.txt', all_epoch)
     print(all_epoch.shape)
 

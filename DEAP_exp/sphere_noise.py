@@ -88,6 +88,6 @@ if __name__ == "__main__":
     for i in range(repeat):
         minimize_sphere_continuous_noisy()
     all_epoch = np.array(get_all_epoch())
-    np.savetxt('DEAP_exp/log/sphere_noisy.txt', all_epoch)
+    np.savetxt('DEAP_exp/log/sphere_20.txt', all_epoch)
     print(all_epoch.shape)
 

@@ -88,5 +88,5 @@ if __name__ == "__main__":
     for i in range(repeat):
         minimize_ackley_continuous_noisy()
     all_epoch = np.array(get_all_epoch())
-    np.savetxt('DEAP_exp/log/ackley_noisy.txt', all_epoch)
+    np.savetxt('DEAP_exp/log/ackley_20.txt', all_epoch)
     print(all_epoch.shape)
