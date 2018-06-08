@@ -2,23 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d9d1730-8a98-4edc-b0b2-6160303766f6" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/DEAP_exp/ackley_high_dim.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/DEAP_exp/sphere_high_dim.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/objective_function/high_dim_function.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/scikitopt_exp/ackley_20.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/scikitopt_exp/get_ave_std.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/scikitopt_exp/sphere_20.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/scikitopt_exp/test.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/CMAES_exp/ackley_high_dim.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/CMAES_exp/sphere_high_dim.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/ZOOpt_exp/ackley_high_dim.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/ZOOpt_exp/ackley_high_dim_sre.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/ZOOpt_exp/sphere_high_dim.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/ZOOpt_exp/sphere_high_dim_sre.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/plot/high_dimension/plot_ackley_high_dim.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/plot/high_dimension/plot_sphere_high_dim.py" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/DEAP_exp/ackley_high_dim.py" afterPath="$PROJECT_DIR$/DEAP_exp/ackley_high_dim.py" />
       <change beforePath="$PROJECT_DIR$/DEAP_exp/get_ave_std.py" afterPath="$PROJECT_DIR$/DEAP_exp/get_ave_std.py" />
-      <change beforePath="$PROJECT_DIR$/DEAP_exp/log/sphere_20.txt" afterPath="$PROJECT_DIR$/DEAP_exp/log/sphere_20.txt" />
-      <change beforePath="$PROJECT_DIR$/DEAP_exp/log/sphere_20_ave_std.txt" afterPath="$PROJECT_DIR$/DEAP_exp/log/sphere_20_ave_std.txt" />
-      <change beforePath="$PROJECT_DIR$/DEAP_exp/sphere_20.py" afterPath="$PROJECT_DIR$/DEAP_exp/sphere_20.py" />
-      <change beforePath="$PROJECT_DIR$/objective_function/base_function.py" afterPath="$PROJECT_DIR$/objective_function/base_function.py" />
-      <change beforePath="$PROJECT_DIR$/plot/img/ackley_20.pdf" afterPath="$PROJECT_DIR$/plot/img/ackley_20.pdf" />
-      <change beforePath="$PROJECT_DIR$/plot/img/sphere_20.pdf" afterPath="$PROJECT_DIR$/plot/img/sphere_20.pdf" />
-      <change beforePath="$PROJECT_DIR$/plot/low_20/plot_ackley_20.py" afterPath="$PROJECT_DIR$/plot/low_20/plot_ackley_20.py" />
-      <change beforePath="$PROJECT_DIR$/plot/low_20/plot_sphere_20.py" afterPath="$PROJECT_DIR$/plot/low_20/plot_sphere_20.py" />
+      <change beforePath="$PROJECT_DIR$/DEAP_exp/sphere_high_dim.py" afterPath="$PROJECT_DIR$/DEAP_exp/sphere_high_dim.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -38,33 +33,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="noisy_function.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/objective_function/noisy_function.py">
+      <file leaf-file-name="get_ave_std.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DEAP_exp/get_ave_std.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="409">
-              <caret line="72" column="9" lean-forward="false" selection-start-line="72" selection-start-column="9" selection-end-line="72" selection-end-column="9" />
+            <state relative-caret-position="465">
+              <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ordinary_function.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/objective_function/ordinary_function.py">
+      <file leaf-file-name="plot_ackley_20.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/plot/low_20/plot_ackley_20.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="20" lean-forward="false" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
+            <state relative-caret-position="405">
+              <caret line="27" column="20" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="27" selection-end-column="20" />
               <folding>
-                <element signature="e#0#59#0" expanded="true" />
+                <element signature="e#0#18#0" expanded="true" />
+                <marker date="1528427260458" expanded="true" signature="1084:1109" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="high_dim_function.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/objective_function/high_dim_function.py">
+      <file leaf-file-name="plot_ackley_high_dim.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/plot/high_dimension/plot_ackley_high_dim.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="825">
-              <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+            <state relative-caret-position="105">
+              <caret line="7" column="20" lean-forward="true" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -73,45 +69,61 @@
         </entry>
       </file>
       <file leaf-file-name="ackley_high_dim.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DEAP_exp/ackley_high_dim.py">
+        <entry file="file://$PROJECT_DIR$/CMAES_exp/ackley_high_dim.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="68" column="24" lean-forward="false" selection-start-line="68" selection-start-column="24" selection-end-line="68" selection-end-column="24" />
+            <state relative-caret-position="180">
+              <caret line="12" column="46" lean-forward="false" selection-start-line="12" selection-start-column="46" selection-end-line="12" selection-end-column="46" />
               <folding>
-                <element signature="e#0#15#0" expanded="true" />
+                <element signature="e#0#129#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ackley_high_dim_sre.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ZOOpt_exp/ackley_high_dim_sre.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="24" column="69" lean-forward="false" selection-start-line="24" selection-start-column="69" selection-end-line="24" selection-end-column="69" />
+              <folding>
+                <element signature="e#0#114#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sphere_high_dim_sre.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ZOOpt_exp/sphere_high_dim_sre.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="510">
+              <caret line="34" column="0" lean-forward="true" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#114#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ackley_high_dim.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ZOOpt_exp/ackley_high_dim.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="13" column="31" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#114#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="sphere_high_dim.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DEAP_exp/sphere_high_dim.py">
+        <entry file="file://$PROJECT_DIR$/ZOOpt_exp/sphere_high_dim.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="81" column="25" lean-forward="true" selection-start-line="81" selection-start-column="25" selection-end-line="81" selection-end-column="25" />
+            <state relative-caret-position="330">
+              <caret line="22" column="70" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
               <folding>
-                <element signature="e#0#15#0" expanded="true" />
+                <element signature="e#0#114#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="get_ave_std.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/DEAP_exp/get_ave_std.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="base_function.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/objective_function/base_function.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="28" column="18" lean-forward="false" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -128,15 +140,15 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>evals</find>
-      <find>sphere</find>
       <find>budget</find>
       <find>mean`</find>
       <find>numpy</find>
+      <find>sphere</find>
       <find>ackley</find>
     </findStrings>
     <replaceStrings>
-      <replace>ackley</replace>
       <replace>np</replace>
+      <replace>ackley</replace>
       <replace>sphere</replace>
     </replaceStrings>
   </component>
@@ -146,14 +158,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/myplot/plot_noisy_sphere.py" />
-        <option value="$PROJECT_DIR$/myplot/plot_noisy_ackley.py" />
-        <option value="$PROJECT_DIR$/test/test_func.py" />
-        <option value="$PROJECT_DIR$/test/test.py" />
-        <option value="$PROJECT_DIR$/myplot/get_ave_std.py" />
-        <option value="$PROJECT_DIR$/myplot/noisy/plot_noisy_sphere.py" />
-        <option value="$PROJECT_DIR$/CMAES_exp/get_noisy_sphere.py" />
-        <option value="$PROJECT_DIR$/CMAES_exp/get_noisy_ackley.py" />
         <option value="$PROJECT_DIR$/objective_function/objective_function.py" />
         <option value="$PROJECT_DIR$/ZOOpt_exp/get_noisy_ackley.py" />
         <option value="$PROJECT_DIR$/ZOOpt_exp/get_noisy_sphere.py" />
@@ -194,9 +198,17 @@
         <option value="$PROJECT_DIR$/objective_function/optimal_position/high_dim_function.py" />
         <option value="$PROJECT_DIR$/objective_function/base_function.py" />
         <option value="$PROJECT_DIR$/objective_function/high_dim_function.py" />
-        <option value="$PROJECT_DIR$/DEAP_exp/ackley_high_dim.py" />
-        <option value="$PROJECT_DIR$/DEAP_exp/sphere_high_dim.py" />
+        <option value="$PROJECT_DIR$/plot/high_dimension/plot_sphere_high_dim.py" />
         <option value="$PROJECT_DIR$/DEAP_exp/get_ave_std.py" />
+        <option value="$PROJECT_DIR$/plot/high_dimension/plot_ackley_high_dim.py" />
+        <option value="$PROJECT_DIR$/DEAP_exp/sphere_high_dim.py" />
+        <option value="$PROJECT_DIR$/CMAES_exp/ackley_high_dim.py" />
+        <option value="$PROJECT_DIR$/CMAES_exp/sphere_high_dim.py" />
+        <option value="$PROJECT_DIR$/DEAP_exp/ackley_high_dim.py" />
+        <option value="$PROJECT_DIR$/ZOOpt_exp/ackley_high_dim.py" />
+        <option value="$PROJECT_DIR$/ZOOpt_exp/sphere_high_dim.py" />
+        <option value="$PROJECT_DIR$/ZOOpt_exp/ackley_high_dim_sre.py" />
+        <option value="$PROJECT_DIR$/ZOOpt_exp/sphere_high_dim_sre.py" />
       </list>
     </option>
   </component>
@@ -206,11 +218,11 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="219" />
-    <option name="y" value="60" />
-    <option name="width" value="856" />
-    <option name="height" value="782" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-19" />
+    <option name="y" value="36" />
+    <option name="width" value="1440" />
+    <option name="height" value="877" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -240,7 +252,7 @@
             <path>
               <item name="ZOOpt_experiment" type="b2602c69:ProjectViewProjectNode" />
               <item name="ZOOpt_experiment" type="462c0819:PsiDirectoryNode" />
-              <item name="plot" type="462c0819:PsiDirectoryNode" />
+              <item name="ZOOpt_exp" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -405,7 +417,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="877" extended-state="6" />
+    <frame x="-19" y="36" width="1440" height="877" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -413,7 +426,7 @@
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.95907927" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32992327" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6751918" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24641834" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1504298" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Julia Document" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -437,66 +450,12 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/outcmaesaxlencorr.dat">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="8772" column="22" lean-forward="false" selection-start-line="8772" selection-start-column="22" selection-end-line="8772" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/outcmaesxmean.dat">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="20" lean-forward="false" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/outcmaesxrecentbest.dat">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="25" lean-forward="true" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CMAES_exp/log/sphere_noisy_ave_std.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-35664">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CMAES_exp/log/ackley_noisy.txt">
-      <provider selected="true" editor-type-id="LargeFileEditor">
-        <state relative-caret-position="150">
-          <caret line="0" column="1354" lean-forward="false" selection-start-line="0" selection-start-column="1354" selection-end-line="0" selection-end-column="1354" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/objective_function/get_optimal_position.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="4" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ZOOpt_exp/log/ackley_noisy.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="0" column="3076" lean-forward="false" selection-start-line="0" selection-start-column="3076" selection-end-line="0" selection-end-column="3076" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/outcmaesaxlen.dat">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="67" lean-forward="false" selection-start-line="17" selection-start-column="67" selection-end-line="17" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/test_func.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -565,16 +524,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CMAES_exp/sphere_20.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="14" lean-forward="true" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#124#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/plot/noisy/plot_noisy_ackley.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="930">
@@ -635,16 +584,6 @@
           <caret line="16" column="60" lean-forward="false" selection-start-line="16" selection-start-column="60" selection-end-line="16" selection-end-column="60" />
           <folding>
             <element signature="e#0#140#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ZOOpt_exp/ackley_20.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="22" column="70" lean-forward="false" selection-start-line="22" selection-start-column="70" selection-end-line="22" selection-end-column="70" />
-          <folding>
-            <element signature="e#0#109#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -730,16 +669,6 @@
         <state relative-caret-position="454">
           <caret line="86" column="25" lean-forward="true" selection-start-line="86" selection-start-column="25" selection-end-line="86" selection-end-column="25" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plot/low_20/plot_ackley_20.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="70" column="0" lean-forward="true" selection-start-line="70" selection-start-column="0" selection-end-line="71" selection-end-column="16" />
-          <folding>
-            <marker date="1528427260458" expanded="true" signature="1084:1109" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -851,10 +780,65 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/plot/high_dimension/plot_sphere_high_dim.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plot/low_20/plot_ackley_20.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="20" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="27" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+            <marker date="1528427260458" expanded="true" signature="1084:1109" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plot/high_dimension/plot_ackley_high_dim.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="20" lean-forward="true" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMAES_exp/sphere_20.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="30" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#124#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ZOOpt_exp/ackley_20.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="21" column="26" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DEAP_exp/get_ave_std.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/DEAP_exp/ackley_high_dim.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="68" column="24" lean-forward="false" selection-start-line="68" selection-start-column="24" selection-end-line="68" selection-end-column="24" />
+        <state relative-caret-position="180">
+          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
@@ -863,19 +847,71 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DEAP_exp/sphere_high_dim.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="81" column="25" lean-forward="true" selection-start-line="81" selection-start-column="25" selection-end-line="81" selection-end-column="25" />
+        <state relative-caret-position="510">
+          <caret line="34" column="37" lean-forward="true" selection-start-line="34" selection-start-column="37" selection-end-line="34" selection-end-column="37" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DEAP_exp/get_ave_std.py">
+    <entry file="file://$PROJECT_DIR$/CMAES_exp/ackley_high_dim.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="180">
+          <caret line="12" column="46" lean-forward="false" selection-start-line="12" selection-start-column="46" selection-end-line="12" selection-end-column="46" />
+          <folding>
+            <element signature="e#0#129#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMAES_exp/sphere_high_dim.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="20" lean-forward="true" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#129#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ZOOpt_exp/sphere_high_dim.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="70" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#114#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ZOOpt_exp/ackley_high_dim.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="31" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#114#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ZOOpt_exp/sphere_high_dim_sre.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="34" column="0" lean-forward="true" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#114#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ZOOpt_exp/ackley_high_dim_sre.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="69" lean-forward="false" selection-start-line="24" selection-start-column="69" selection-end-line="24" selection-end-column="69" />
+          <folding>
+            <element signature="e#0#114#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

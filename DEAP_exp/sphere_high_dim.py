@@ -13,7 +13,7 @@ from deap import tools
 creator.create("FitnessMin", base.Fitness, weights=(-1.0,))
 creator.create("Particle", list, fitness=creator.FitnessMin, speed=list,
     smin=None, smax=None, best=None)
-dim_size = 20
+dim_size = 10000
 
 
 def generate(size, pmin, pmax, smin, smax):
@@ -83,8 +83,9 @@ if __name__ == '__main__':
         "/Users/liu/Desktop/CS/ZOOpt_exp/ZOOpt_experiment/objective_function/optimal_position/sphere_10000.txt")
     repeat = 10
     set_epoch_len(10000)
-    for _ in range(repeat):
+    for i in range(repeat):
         minimize_sphere_continuous()
+        print(i)
     all_epoch = np.array(get_all_epoch())
     np.savetxt('DEAP_exp/log/sphere_high_dim.txt', all_epoch)
     print(all_epoch.shape)
