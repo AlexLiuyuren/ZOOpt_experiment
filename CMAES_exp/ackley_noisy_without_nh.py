@@ -21,7 +21,7 @@ def minimize_ackley():
 if __name__ == '__main__':
     set_optimal_position(
         "/Users/liu/Desktop/CS/ZOOpt_exp/ZOOpt_experiment/objective_function/optimal_position/ackley_100.txt")
-    repeat = 1
+    repeat = 10
     set_epoch_len(200000)
     for i in range(repeat):
         sol = minimize_ackley()

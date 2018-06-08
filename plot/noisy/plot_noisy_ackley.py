@@ -13,6 +13,9 @@ if __name__ == '__main__':
     CMAES_data = np.loadtxt('CMAES_exp/log/ackley_noisy_ave_std.txt')
     ave_CMAES = CMAES_data[0][25000:]
     std_CMAES = CMAES_data[1][25000:]
+    CMAES_data_without_nh = np.loadtxt('CMAES_exp/log/ackley_noisy_no_ave_std.txt')
+    ave_without_nh_CMAES = CMAES_data_without_nh[0][25000:]
+    std_without_nh_CMAES = CMAES_data_without_nh[1][25000:]
     DEAP_data = np.loadtxt('DEAP_exp/log/ackley_noisy_ave_std.txt')
     ave_DEAP = DEAP_data[0][25000:]
     std_DEAP = DEAP_data[1][25000:]
@@ -70,10 +73,12 @@ if __name__ == '__main__':
     plt.fill_between(x, ave_zoopt - std_zoopt, ave_zoopt + std_zoopt, facecolor='c', alpha=0.5)
     plt.plot(x, ave_zoopt, '-', color='c', label='ZOOpt-nh')
     plt.fill_between(x, ave_without_nh_zoopt - std_without_nh_zoopt, ave_without_nh_zoopt + std_without_nh_zoopt,
-                     facecolor='red', alpha=0.5)
+                     facecolor='red', alpha=0.2)
     plt.plot(x, ave_without_nh_zoopt, 'r-', label='ZOOpt')
     plt.fill_between(x, ave_CMAES - std_CMAES, ave_CMAES + std_CMAES, facecolor='tan', alpha=0.5)
     plt.plot(x, ave_CMAES, '-', color='tan', label='CMAES-nh')
+    plt.fill_between(x, ave_without_nh_CMAES - std_without_nh_CMAES, ave_without_nh_CMAES + std_without_nh_CMAES, facecolor='green', alpha=0.2)
+    plt.plot(x, ave_without_nh_CMAES, '-', color='green', label='CMAES')
     plt.fill_between(x, ave_DEAP - std_DEAP, ave_DEAP + std_DEAP, facecolor='blue', alpha=0.5)
     plt.plot(x, ave_DEAP, 'b-', label='DEAP')
     # plt.fill_between(evals, sp2 - sp2_std, sp2 + sp2_std, facecolor='green', alpha=0.5)
