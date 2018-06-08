@@ -2,7 +2,7 @@ import operator
 import random
 
 import numpy as np
-from objective_function.ordinary_function import sphere_log, get_all_epoch, set_epoch_len, clear_noisy_global
+from objective_function.high_dim_function import ackley_high_log, get_all_epoch, set_epoch_len, clear_noisy_global
 from objective_function.base_function import set_optimal_position
 from deap import base
 from deap import benchmarks
@@ -38,12 +38,12 @@ def updateParticle(part, best, phi1, phi2):
     part[:] = list(map(operator.add, part, part.speed))
 
 
-def minimize_sphere_continuous():
+def minimize_ackley_continuous():
     toolbox = base.Toolbox()
-    toolbox.register("particle", generate, size=dim_size, pmin=-1, pmax=1, smin=-0.2, smax=0.2)
+    toolbox.register("particle", generate, size=dim_size, pmin=-1, pmax=1, smin=-0.3, smax=0.3)
     toolbox.register("population", tools.initRepeat, list, toolbox.particle)
     toolbox.register("update", updateParticle, phi1=2.0, phi2=2.0)
-    toolbox.register("evaluate", lambda x: (sphere_log(x), ))
+    toolbox.register("evaluate", lambda x: (ackley_high_log(x), ))
     fmin=[]
     generation = 20
     pop = toolbox.population(n=generation)
@@ -56,7 +56,7 @@ def minimize_sphere_continuous():
     logbook = tools.Logbook()
     logbook.header = ["gen", "evals"] + stats.fields
 
-    GEN = int(100 * dim_size / generation)
+    GEN = int(10000 / generation)
     best = None
     i = 0
     for g in range(GEN):
@@ -80,12 +80,12 @@ def minimize_sphere_continuous():
 
 if __name__ == '__main__':
     set_optimal_position(
-        "/Users/liu/Desktop/CS/ZOOpt_exp/ZOOpt_experiment/objective_function/optimal_position/sphere_20.txt")
+        "/Users/liu/Desktop/CS/ZOOpt_exp/ZOOpt_experiment/objective_function/optimal_position/ackley_10000.txt")
     repeat = 10
-    set_epoch_len(2000)
+    set_epoch_len(10000)
     for _ in range(repeat):
-        minimize_sphere_continuous()
+        minimize_ackley_continuous()
     all_epoch = np.array(get_all_epoch())
-    np.savetxt('DEAP_exp/log/sphere_20.txt', all_epoch)
+    np.savetxt('DEAP_exp/log/ackley_high_dim.txt', all_epoch)
     print(all_epoch.shape)
 

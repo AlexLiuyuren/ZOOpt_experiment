@@ -11,20 +11,21 @@ def read_data(filename):
     return history_list
 
 
+cut = 100
 a1 = np.loadtxt('/Users/liu/Desktop/CS/ZOOpt_exp/ZOOpt_experiment/ZOOpt_exp/log/ackley_20_ave_std.txt')
-a1_ave = a1[0]
-a1_std = a1[1]
+a1_ave = a1[0][cut:]
+a1_std = a1[1][cut:]
 # print(len(a1_ave))
 a2 = np.loadtxt('/Users/liu/Desktop/CS/ZOOpt_exp/ZOOpt_experiment/CMAES_exp/log/ackley_20_ave_std.txt')
-a2_ave = a2[0]
-a2_std = a2[1]
+a2_ave = a2[0][cut:]
+a2_std = a2[1][cut:]
 # print(len(a2_ave))
 a3 = np.loadtxt('/Users/liu/Desktop/CS/ZOOpt_exp/ZOOpt_experiment/DEAP_exp/log/ackley_20_ave_std.txt')
-a3_ave = a3[0]
-a3_std = a3[1]
+a3_ave = a3[0][cut:]
+a3_std = a3[1][cut:]
 a4 = np.loadtxt('/Users/liu/Desktop/CS/ZOOpt_exp/ZOOpt_experiment/hyperopt_exp/log/ackley_20_ave_std.txt')
-a4_ave = a4[0]
-a4_std = a4[1]
+a4_ave = a4[0][cut:]
+a4_std = a4[1][cut:]
 # a4=np.loadtxt('D:/comparative experiment/scikit-optimize/skoptackley.txt')
 # for i in range(10):
 #     a4[i][0] = 4.3
@@ -48,7 +49,7 @@ stda2 = []
 #     # meana4.append(np.mean(value4))
 #     # stda4.append(np.std(value4))
 # print(len(a3_ave))
-x=np.arange(1, 2001, 1)
+x=np.arange(1 + cut, 2001, 1)
 # a3_ave = np.array(a3_ave)
 # a3_std = np.array(a3_std)
 # meana4=np.array(meana4)
@@ -67,5 +68,7 @@ plt.plot(x, a4_ave, '-', color='orange', label='Hyperopt')
 plt.xlabel('budget')
 plt.ylabel('error')
 plt.title('Ackley,dimension=20')
+plt.xlim(xmin=0)
+plt.ylim(ymin=0)
 plt.legend()
 plt.savefig('/Users/liu/Desktop/CS/ZOOpt_exp/ZOOpt_experiment/plot/img/ackley_20.pdf', dpi=400)

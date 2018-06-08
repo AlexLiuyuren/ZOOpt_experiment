@@ -21,7 +21,11 @@ if __name__ == '__main__':
     # result_sphere = get_ave_std('DEAP_exp/log/sphere_noisy.txt', line)
     # np.savetxt('DEAP_exp/log/sphere_noisy_ave_std.txt', result_sphere)
 
-    result_ackley = get_ave_std('DEAP_exp/log/ackley_20.txt', line)
-    np.savetxt('DEAP_exp/log/ackley_20_ave_std.txt', result_ackley)
+    # result_ackley = get_ave_std('DEAP_exp/log/ackley_20.txt', line)
+    # np.savetxt('DEAP_exp/log/ackley_20_ave_std.txt', result_ackley)
     # result_sphere = get_ave_std('DEAP_exp/log/sphere_20.txt', line)
     # np.savetxt('DEAP_exp/log/sphere_20_ave_std.txt', result_sphere)
+    result_sphere = get_ave_std('DEAP_exp/log/sphere_high_dim.txt', line)
+    np.savetxt('DEAP_exp/log/sphere_high_dim_ave_std.txt', result_sphere)
+    result_sphere = get_ave_std('DEAP_exp/log/sphere_high_dim.txt', line)
+    np.savetxt('DEAP_exp/log/sphere_high_dim_ave_std.txt', result_sphere)
