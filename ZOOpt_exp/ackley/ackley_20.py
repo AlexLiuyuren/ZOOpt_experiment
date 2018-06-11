@@ -8,7 +8,7 @@ import numpy as np
 if __name__ == '__main__':
     repeat_num = 10
     set_optimal_position(
-        "/Users/liu/Desktop/CS/ZOOpt_exp/ZOOpt_experiment/objective_function/optimal_position/ackley/ackley_20.txt")
+        "objective_function/optimal_position/ackley/ackley_20.txt")
     gl.set_seed(666)
     set_epoch_len(2000)
     for i in range(repeat_num):

@@ -7,7 +7,7 @@ import numpy as np
 if __name__ == '__main__':
     repeat_num = 10
     set_optimal_position(
-        "/Users/liu/Desktop/CS/ZOOpt_exp/ZOOpt_experiment/objective_function/optimal_position/griewank/griewank_100.txt")
+        "objective_function/optimal_position/griewank/griewank_100.txt")
     budget = 200000
     set_epoch_len(budget)
     gl.set_seed(666)

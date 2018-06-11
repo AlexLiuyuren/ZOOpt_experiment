@@ -8,7 +8,7 @@ import numpy as np
 if __name__ == '__main__':
     repeat_num = 10
     set_optimal_position(
-        "/Users/liu/Desktop/CS/ZOOpt_exp/ZOOpt_experiment/objective_function/optimal_position/sphere/sphere_20.txt")
+        "objective_function/optimal_position/sphere/sphere_20.txt")
     gl.set_seed(666)
     for i in range(repeat_num):
         dim_size = 20  # dimensions

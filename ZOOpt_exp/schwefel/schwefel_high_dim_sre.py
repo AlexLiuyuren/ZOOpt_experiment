@@ -10,7 +10,7 @@ if __name__ == '__main__':
     budget = 10000
     set_epoch_len(budget)
     set_optimal_position(
-        "/Users/liu/Desktop/CS/ZOOpt_exp/ZOOpt_experiment/objective_function/optimal_position/schwefel/schwefel_10000.txt")
+        "objective_function/optimal_position/schwefel/schwefel_10000.txt")
     gl.set_seed(666)
     dim_lim = 5
     for i in range(repeat_num):

@@ -9,7 +9,7 @@ if __name__ == '__main__':
     repeat_num = 10
     set_epoch_len(10000)
     set_optimal_position(
-        "/Users/liu/Desktop/CS/ZOOpt_exp/ZOOpt_experiment/objective_function/optimal_position/griewank/griewank_10000.txt")
+        "objective_function/optimal_position/griewank/griewank_10000.txt")
     gl.set_seed(666)
     budget = 10000
     set_epoch_len(budget)
