@@ -29,8 +29,11 @@ def get_optimal_position(search_space, f_out):
 
 if __name__ == '__main__':
     dim_size = eval(sys.argv[2])
-    file_name = 'objective_function/optimal_position/' + sys.argv[1] + '_' + str(dim_size) + '.txt'
-    search_space = [[-1, 1]] * dim_size
+    region = [[-1, 1]]
+    if len(sys.argv) > 3:
+        region = [[-1 * eval(sys.argv[3]), eval(sys.argv[3])]]
+    file_name = 'objective_function/optimal_position/' + sys.argv[1] + '/' + sys.argv[1] + '_' + str(dim_size) + '.txt'
+    search_space = region * dim_size
     get_optimal_position(search_space, file_name)
 
 

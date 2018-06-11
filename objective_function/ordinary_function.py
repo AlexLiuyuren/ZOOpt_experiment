@@ -1,4 +1,4 @@
-from objective_function.base_function import sphere, ackley
+from objective_function.base_function import sphere, ackley, rastrigin, griewank, schwefel
 import numpy as np
 
 
@@ -23,8 +23,8 @@ def get_epoch_cnt():
     return epoch_cnt
 
 
-def sphere_log(x):
-    result = sphere(x)
+def function_log(func, x):
+    result = func(x)
     global all_epoch, epoch, pcount, epoch_cnt, best_result
     if result < best_result:
         epoch.append(result)
@@ -36,22 +36,26 @@ def sphere_log(x):
         all_epoch.append(epoch[:epoch_len])
         epoch_cnt += 1
     return result
+
+
+def sphere_log(x):
+    return function_log(sphere, x)
 
 
 def ackley_log(x):
-    result = ackley(x)
-    global all_epoch, epoch, pcount, epoch_cnt, best_result
-    if result < best_result:
-        epoch.append(result)
-        best_result = result
-    else:
-        epoch.append(epoch[-1])
-    pcount += 1
-    if pcount == epoch_len:
-        all_epoch.append(epoch[:epoch_len])
-        epoch_cnt += 1
-    # print(len(epoch))
-    return result
+    return function_log(ackley, x)
+
+
+def rastrigin_log(x):
+    return function_log(rastrigin, x)
+
+
+def griewank_log(x):
+    return function_log(griewank, x)
+
+
+def schwefel_log(x):
+    return function_log(schwefel, x)
 
 
 def clear_noisy_global():

@@ -1,20 +1,19 @@
 import numpy as np
-from objective_function.base_function import sphere, ackley, set_optimal_position
+from objective_function.base_function import sphere, ackley, rastrigin, griewank, schwefel, set_optimal_position
 
 
-set_optimal_position('/Users/liu/Desktop/CS/ZOOpt_exp/ZOOpt_experiment/objective_function/optimal_position/sphere_100.txt')
+# set_optimal_position('/Users/liu/Desktop/CS/ZOOpt_exp/ZOOpt_experiment/objective_function/optimal_position/sphere_100.txt')
 
 
-def sphere_noise_creator(mu, sigma):
-    return lambda x: sphere(x) + np.random.normal(mu, sigma)
+def func_noise_creator(func, mu, sigma):
+    return lambda x: func(x) + np.random.normal(mu, sigma)
 
 
-def ackley_noise_creator(mu, sigma):
-    return lambda x: ackley(x) + np.random.normal(mu, sigma)
-
-
-sphere_noisy = sphere_noise_creator(0, 1)
-ackley_noisy = ackley_noise_creator(0, 0.1)
+sphere_noisy = func_noise_creator(sphere, 0, 1)
+ackley_noisy = func_noise_creator(ackley, 0, 0.1)
+rastrigin_noisy = func_noise_creator(rastrigin, 0, 1)
+griewank_noisy = func_noise_creator(griewank, 0, 0.1)
+schwefel_noisy = func_noise_creator(schwefel, 0, 1)
 
 
 ############################################
@@ -62,10 +61,9 @@ def get_epoch_cnt():
     return epoch_cnt
 
 
-def sphere_noise_log(x):
-    # print(x)
-    result = sphere_noisy(x)
-    true_result = sphere(x)
+def func_noise_log(func_noisy, func, x):
+    result = func_noisy(x)
+    true_result = func(x)
     global all_epoch, true_epoch, pcount, epoch_cnt, best_result
     if result < best_result:
         true_epoch.append(true_result)
@@ -76,24 +74,27 @@ def sphere_noise_log(x):
     if pcount == epoch_len:
         all_epoch.append(true_epoch[:epoch_len])
         epoch_cnt += 1
-    # print(len(true_epoch))
     return result
+
+
+def sphere_noise_log(x):
+    return func_noise_log(sphere_noisy, sphere, x)
 
 
 def ackley_noise_log(x):
-    result = ackley_noisy(x)
-    true_result = ackley(x)
-    global all_epoch, true_epoch, pcount, epoch_cnt, best_result
-    if result < best_result:
-        true_epoch.append(true_result)
-        best_result = result
-    else:
-        true_epoch.append(true_epoch[-1])
-    pcount += 1
-    if pcount == epoch_len:
-        all_epoch.append(true_epoch[:epoch_len])
-        epoch_cnt += 1
-    return result
+    return func_noise_log(ackley_noisy, ackley, x)
+
+
+def rastrigin_noise_log(x):
+    return func_noise_log(rastrigin_noisy, rastrigin, x)
+
+
+def griewank_noise_log(x):
+    return func_noise_log(griewank_noisy, griewank, x)
+
+
+def schwefel_noise_log(x):
+    return func_noise_log(schwefel_noisy, schwefel, x)
 
 
 def clear_noisy_global():

@@ -39,16 +39,52 @@ def ackley(x):
     return value
 
 
-def sphere_high(x):
+def rastrigin(x):
     """
-        Variant of the sphere function. Dimensions except the first 10 ones have limited impact on the function value.
+        rastrigin function
+    """
+    x_len = len(x)
+    seq = 0
+    cos = 0
+    for i in range(x_len):
+        seq += (x[i] - optimal_position[i]) * (x[i] - optimal_position[i])
+        cos += np.cos(2.0 * np.pi * (x[i] - optimal_position[i]))
+    value = 10 * x_len + seq - 10 * cos
+    return value
+
+
+def schwefel(x):
+    """
+        schwefel function
+    """
+    x_len = len(x)
+    value = 0
+    for i in range(x_len):
+        value += x[i] * np.sin(np.sqrt(np.abs(x[i])))
+    return 418.9829 * x_len - value
+
+
+def griewank(x):
+    """
+        griewank function
+    """
+    x_len = len(x)
+    seq = 0
+    cos = 1
+    for i in range(x_len):
+        seq += (x[i] - optimal_position[i]) * (x[i] - optimal_position[i])
+        cos *= np.cos((x[i] - optimal_position[i]) / np.sqrt(i+1))
+    value = seq / 4000.0 - cos + 1
+    return value
+
+
+def function_high(func, x):
+    """
+        Variant of the func function. Dimensions except the first 10 ones have limited impact on the function value.
     """
     x1 = x[:10]
     x2 = x[10:]
-    j = 0
-    value1 = 0
-    for i in range(len(x1)):
-        value1 += (x1[i] - optimal_position[i]) * (x1[i] - optimal_position[i])
+    value1 = func(x1)
     value2 = 0
     for i in range(len(x2)):
         value2 += (x2[i] - optimal_position[i + 10]) * (x2[i] - optimal_position[i + 10])
@@ -56,24 +92,21 @@ def sphere_high(x):
     return value1 + value2
 
 
+def sphere_high(x):
+    return function_high(sphere, x)
+
+
 def ackley_high(x):
-    """
-        Variant of the ackley function. Dimensions except the first 10 ones have limited impact on the function value.
-    """
-    x1 = x[:10]
-    x2 = x[10:]
-    ave_seq = 0
-    for i in range(len(x1)):
-        ave_seq += (x1[i] - optimal_position[i]) * (x1[i] - optimal_position[i])
-    ave_seq = ave_seq/len(x1)
-    ave_cos = 0
-    for i in range(len(x1)):
-        ave_cos += np.cos(2.0 * np.pi * (x1[i] - optimal_position[i]))
-    ave_cos = ave_cos / len(x1)
-    value = -20 * np.exp(-0.2 * np.sqrt(ave_seq)) - np.exp(ave_cos) + 20.0 + np.e
-    ave_seq2 = 0
-    for i in range(len(x2)):
-        ave_seq2 += (x2[i]-optimal_position[i + 10]) * (x2[i]-optimal_position[i + 10])
-    ave_seq2 = ave_seq2 / len(x)
-    value2 = ave_seq2
-    return value + value2
+    return function_high(ackley, x)
+
+
+def rastrigin_high(x):
+    return function_high(rastrigin, x)
+
+
+def griewank_high(x):
+    return function_high(griewank, x)
+
+
+def schwefel_high(x):
+    return function_high(schwefel, x)
