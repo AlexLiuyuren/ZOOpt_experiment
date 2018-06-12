@@ -14,6 +14,8 @@ creator.create("FitnessMin", base.Fitness, weights=(-1.0,))
 creator.create("Particle", list, fitness=creator.FitnessMin, speed=list,
     smin=None, smax=None, best=None)
 dim_size = 20
+dim_lim = 10
+speed_lim = 2
 
 
 def generate(size, pmin, pmax, smin, smax):
@@ -38,15 +40,15 @@ def updateParticle(part, best, phi1, phi2):
     part[:] = list(map(operator.add, part, part.speed))
 
 
-def minimize_ackley_continuous():
+def minimize_griewank_continuous():
     toolbox = base.Toolbox()
-    toolbox.register("particle", generate, size=dim_size, pmin=-1, pmax=1, smin=-0.3, smax=0.3)
+    toolbox.register("particle", generate, size=dim_size, pmin=-dim_lim, pmax=dim_lim, smin=-speed_lim, smax=speed_lim)
     toolbox.register("population", tools.initRepeat, list, toolbox.particle)
-    toolbox.register("update", updateParticle, phi1=2.0, phi2=2.0)
+    toolbox.register("update", updateParticle, phi1=1.0, phi2=1.0)
     toolbox.register("evaluate", lambda x: (griewank_log(x), ))
     fmin=[]
-    generation = 10
-    pop = toolbox.population(n=generation)
+    population = 10
+    pop = toolbox.population(n=population)
     stats = tools.Statistics(lambda ind: ind.fitness.values)
     stats.register("avg", np.mean)
     stats.register("std", np.std)
@@ -56,7 +58,7 @@ def minimize_ackley_continuous():
     logbook = tools.Logbook()
     logbook.header = ["gen", "evals"] + stats.fields
 
-    GEN = int(100 * dim_size / generation)
+    GEN = int(2000 / population)
     best = None
     i = 0
     for g in range(GEN):
@@ -80,13 +82,12 @@ def minimize_ackley_continuous():
 
 if __name__ == '__main__':
     set_optimal_position(
-        "/Users/liu/Desktop/CS/ZOOpt_exp/ZOOpt_experiment/objective_function/optimal_position/griewank/griewank_20.txt")
-    repeat = 1
+        "objective_function/optimal_position/griewank/griewank_20.txt")
+    repeat = 10
     set_epoch_len(2000)
     for _ in range(repeat):
-        best = minimize_ackley_continuous()
-        print(best)
+        minimize_griewank_continuous()
     all_epoch = np.array(get_all_epoch())
-    np.savetxt('DEAP_exp/log/griewank_20.txt', all_epoch)
+    np.savetxt('DEAP_exp/log/griewank/griewank_20.txt', all_epoch)
     print(all_epoch.shape)
 

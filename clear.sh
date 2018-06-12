@@ -13,5 +13,4 @@ rm DEAP_exp/log/*/*.txt
 # rm DEAP_exp/log/schwefel/*.txt
 
 rm hyperopt_exp/log/*/*.txt
-rm scikitopt_exp/log/*/*.txt
 rm ZOOpt_exp/log/*/*.txt

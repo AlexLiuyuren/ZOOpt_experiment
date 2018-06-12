@@ -14,6 +14,8 @@ creator.create("FitnessMin", base.Fitness, weights=(-1.0,))
 creator.create("Particle", list, fitness=creator.FitnessMin, speed=list,
     smin=None, smax=None, best=None)
 dim_size = 20
+dim_lim = 1
+speed_lim = 0.3
 
 
 def generate(size, pmin, pmax, smin, smax):
@@ -40,7 +42,7 @@ def updateParticle(part, best, phi1, phi2):
 
 def minimize_ackley_continuous():
     toolbox = base.Toolbox()
-    toolbox.register("particle", generate, size=dim_size, pmin=-1, pmax=1, smin=-0.3, smax=0.3)
+    toolbox.register("particle", generate, size=dim_size, pmin=-dim_lim, pmax=dim_lim, smin=-speed_lim, smax=speed_lim)
     toolbox.register("population", tools.initRepeat, list, toolbox.particle)
     toolbox.register("update", updateParticle, phi1=2.0, phi2=2.0)
     toolbox.register("evaluate", lambda x: (ackley_log(x), ))
@@ -56,7 +58,7 @@ def minimize_ackley_continuous():
     logbook = tools.Logbook()
     logbook.header = ["gen", "evals"] + stats.fields
 
-    GEN = int(100 * dim_size / generation)
+    GEN = int(2000 / generation)
     best = None
     i = 0
     for g in range(GEN):
@@ -80,12 +82,12 @@ def minimize_ackley_continuous():
 
 if __name__ == '__main__':
     set_optimal_position(
-        "/Users/liu/Desktop/CS/ZOOpt_exp/ZOOpt_experiment/objective_function/optimal_position/ackley_20.txt")
+        "objective_function/optimal_position/ackley/ackley_20.txt")
     repeat = 10
     set_epoch_len(2000)
     for _ in range(repeat):
         minimize_ackley_continuous()
     all_epoch = np.array(get_all_epoch())
-    np.savetxt('DEAP_exp/log/ackley_20.txt', all_epoch)
+    np.savetxt('DEAP_exp/log/ackley/ackley_20.txt', all_epoch)
     print(all_epoch.shape)
 

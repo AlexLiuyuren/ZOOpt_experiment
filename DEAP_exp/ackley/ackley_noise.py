@@ -2,12 +2,17 @@ import operator
 import random
 
 import numpy as np
-from objective_function.noisy_function import sphere_noise_log, ackley_noise_log, clear_noisy_global, get_all_epoch, set_epoch_len
+from objective_function.noisy_function import ackley_noise_log, ackley_noise_log, clear_noisy_global, get_all_epoch, set_epoch_len
 from objective_function.base_function import set_optimal_position
 from deap import base
 from deap import benchmarks
 from deap import creator
 from deap import tools
+
+
+dim_size = 100
+dim_lim = 1
+speed_lim = 0.3
 
 creator.create("FitnessMin", base.Fitness, weights=(-1.0, ))
 creator.create("Particle", list, fitness=creator.FitnessMin, speed=list,
@@ -41,12 +46,13 @@ dim_size = 100
 
 def minimize_ackley_continuous_noisy():
     toolbox = base.Toolbox()
-    toolbox.register("particle", generate, size=dim_size, pmin=-1, pmax=1, smin=-0.0002, smax=0.0002)
+    toolbox.register("particle", generate, size=dim_size, pmin=-dim_lim, pmax=dim_lim, smin=-speed_lim, smax=speed_lim)
     toolbox.register("population", tools.initRepeat, list, toolbox.particle)
     toolbox.register("update", updateParticle, phi1=2.0, phi2=2.0)
     toolbox.register("evaluate", lambda x: (ackley_noise_log(x), ))
     fmin=[]
-    pop = toolbox.population(n=20)
+    population = 20
+    pop = toolbox.population(n=population)
     stats = tools.Statistics(lambda ind: ind.fitness.values)
     stats.register("avg", np.mean)
     stats.register("std", np.std)
@@ -56,7 +62,7 @@ def minimize_ackley_continuous_noisy():
     logbook = tools.Logbook()
     logbook.header = ["gen", "evals"] + stats.fields
 
-    GEN = evals
+    GEN = int(200000 / population)
     best = None
     i = 0
     for g in range(GEN):
@@ -81,12 +87,11 @@ def minimize_ackley_continuous_noisy():
 
 if __name__ == "__main__":
     set_optimal_position(
-        '/Users/liu/Desktop/CS/ZOOpt_exp/ZOOpt_experiment/objective_function/optimal_position/sphere_100.txt')
-    evals = 10001
+        'objective_function/optimal_position/ackley/ackley_100.txt')
     repeat = 10
     set_epoch_len(200000)
     for i in range(repeat):
         minimize_ackley_continuous_noisy()
     all_epoch = np.array(get_all_epoch())
-    np.savetxt('DEAP_exp/log/ackley_20.txt', all_epoch)
+    np.savetxt('DEAP_exp/log/ackley/ackley_noisy.txt', all_epoch)
     print(all_epoch.shape)

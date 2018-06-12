@@ -2,7 +2,7 @@ import operator
 import random
 
 import numpy as np
-from objective_function.high_dim_function import ackley_high_log, get_all_epoch, set_epoch_len, clear_noisy_global
+from objective_function.high_dim_function import griewank_high_log, get_all_epoch, set_epoch_len, clear_noisy_global
 from objective_function.base_function import set_optimal_position
 from deap import base
 from deap import benchmarks
@@ -14,6 +14,8 @@ creator.create("FitnessMin", base.Fitness, weights=(-1.0,))
 creator.create("Particle", list, fitness=creator.FitnessMin, speed=list,
     smin=None, smax=None, best=None)
 dim_size = 10000
+dim_lim = 10
+speed_lim = 2
 
 
 def generate(size, pmin, pmax, smin, smax):
@@ -38,15 +40,15 @@ def updateParticle(part, best, phi1, phi2):
     part[:] = list(map(operator.add, part, part.speed))
 
 
-def minimize_ackley_continuous():
+def minimize_griewank_continuous():
     toolbox = base.Toolbox()
-    toolbox.register("particle", generate, size=dim_size, pmin=-1, pmax=1, smin=-0.3, smax=0.3)
+    toolbox.register("particle", generate, size=dim_size, pmin=-dim_lim, pmax=dim_lim, smin=-speed_lim, smax=speed_lim)
     toolbox.register("population", tools.initRepeat, list, toolbox.particle)
-    toolbox.register("update", updateParticle, phi1=2.0, phi2=2.0)
-    toolbox.register("evaluate", lambda x: (ackley_high_log(x), ))
+    toolbox.register("update", updateParticle, phi1=1.0, phi2=1.0)
+    toolbox.register("evaluate", lambda x: (griewank_high_log(x), ))
     fmin=[]
-    generation = 20
-    pop = toolbox.population(n=generation)
+    population = 20
+    pop = toolbox.population(n=population)
     stats = tools.Statistics(lambda ind: ind.fitness.values)
     stats.register("avg", np.mean)
     stats.register("std", np.std)
@@ -56,7 +58,7 @@ def minimize_ackley_continuous():
     logbook = tools.Logbook()
     logbook.header = ["gen", "evals"] + stats.fields
 
-    GEN = int(10000 / generation)
+    GEN = int(10000 / population)
     best = None
     i = 0
     for g in range(GEN):
@@ -80,13 +82,13 @@ def minimize_ackley_continuous():
 
 if __name__ == '__main__':
     set_optimal_position(
-        "/Users/liu/Desktop/CS/ZOOpt_exp/ZOOpt_experiment/objective_function/optimal_position/ackley_10000.txt")
+        "objective_function/optimal_position/griewank/griewank_10000.txt")
     repeat = 10
     set_epoch_len(10000)
     for i in range(repeat):
-        minimize_ackley_continuous()
+        minimize_griewank_continuous()
         print(i)
     all_epoch = np.array(get_all_epoch())
-    np.savetxt('DEAP_exp/log/ackley_high_dim.txt', all_epoch)
+    np.savetxt('DEAP_exp/log/griewank/griewank_high_dim.txt', all_epoch)
     print(all_epoch.shape)
 

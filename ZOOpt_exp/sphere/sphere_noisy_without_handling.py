@@ -16,15 +16,7 @@ if __name__ == '__main__':
         dim = Dimension(dim_size, dim_regs, dim_tys)  # form up the dimension object
         objective = Objective(sphere_noise_zoopt, dim)  # form up the objective function
         budget = 200000  # 20*dim_size  # number of calls to the objective function
-        # suppression=True means optimize with value suppression, which is a noise handling method
-        # resampling=True means optimize with re-sampling, which is another common used noise handling method
-        # non_update_allowed=500 and resample_times=100 means if the best solution doesn't change for 500 budgets,
-        # the best solution will be evaluated repeatedly for 100 times
-        # balance_rate is a parameter for exponential weight average of several evaluations of one sample.
         parameter = Parameter(budget=budget)
-
-        # parameter = Parameter(budget=budget, noise_handling=True, resampling=True, resample_times=10)
-        # parameter.set_positive_size(5)
         sol = Opt.min(objective, parameter)
         clear_noisy_global()
     all_epoch = np.array(get_all_epoch())
