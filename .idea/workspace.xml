@@ -2,64 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d9d1730-8a98-4edc-b0b2-6160303766f6" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Task.iml" afterPath="$PROJECT_DIR$/.idea/Task.iml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/CMAES_exp/ackley/ackley_20.py" afterPath="$PROJECT_DIR$/CMAES_exp/ackley/ackley_20.py" />
-      <change beforePath="$PROJECT_DIR$/CMAES_exp/log/ackley/ackley_20_ave_std.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/CMAES_exp/log/ackley/ackley_high_dim.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/CMAES_exp/log/ackley/ackley_noisy_ave_std.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/CMAES_exp/log/ackley/ackley_noisy_no_ave_std.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/CMAES_exp/log/griewank/griewank_1000.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/CMAES_exp/log/griewank/griewank_20.txt" afterPath="$PROJECT_DIR$/CMAES_exp/log/griewank/griewank_20.txt" />
-      <change beforePath="$PROJECT_DIR$/CMAES_exp/log/rastrigin/rastrigin_20.txt" afterPath="$PROJECT_DIR$/CMAES_exp/log/rastrigin/rastrigin_20.txt" />
-      <change beforePath="$PROJECT_DIR$/CMAES_exp/log/schwefel/schwefel_1000.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/CMAES_exp/log/sphere/sphere_20_ave_std.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/CMAES_exp/log/sphere/sphere_high_dim.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/CMAES_exp/log/sphere/sphere_noisy_ave_std.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/CMAES_exp/log/sphere/sphere_noisy_no_ave_std.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/CMAES_exp/rastrigin/rastrigin_high_dim.py" afterPath="$PROJECT_DIR$/CMAES_exp/rastrigin/rastrigin_high_dim.py" />
-      <change beforePath="$PROJECT_DIR$/CMAES_exp/schwefel/schwefel_20.py" afterPath="$PROJECT_DIR$/CMAES_exp/schwefel/schwefel_20.py" />
-      <change beforePath="$PROJECT_DIR$/CMAES_exp/schwefel/schwefel_high_dim.py" afterPath="$PROJECT_DIR$/CMAES_exp/schwefel/schwefel_high_dim.py" />
-      <change beforePath="$PROJECT_DIR$/CMAES_exp/schwefel/schwefel_noisy.py" afterPath="$PROJECT_DIR$/CMAES_exp/schwefel/schwefel_noisy.py" />
-      <change beforePath="$PROJECT_DIR$/CMAES_exp/schwefel/schwefel_noisy_without_nh.py" afterPath="$PROJECT_DIR$/CMAES_exp/schwefel/schwefel_noisy_without_nh.py" />
-      <change beforePath="$PROJECT_DIR$/DEAP_exp/log/ackley/ackley_20_ave_std.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/DEAP_exp/log/ackley/ackley_high_dim.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/DEAP_exp/log/ackley/ackley_high_dim_ave_std.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/DEAP_exp/log/ackley/ackley_noisy_ave_std.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/DEAP_exp/log/griewank/griewank_20.txt" afterPath="$PROJECT_DIR$/DEAP_exp/log/griewank/griewank_20.txt" />
-      <change beforePath="$PROJECT_DIR$/DEAP_exp/log/sphere/sphere_20_ave_std.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/DEAP_exp/log/sphere/sphere_high_dim.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/DEAP_exp/log/sphere/sphere_high_dim_ave_std.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/DEAP_exp/log/sphere/sphere_noisy_ave_std.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/DEAP_exp/schwefel/schwefel_high_dim.py" afterPath="$PROJECT_DIR$/DEAP_exp/schwefel/schwefel_high_dim.py" />
-      <change beforePath="$PROJECT_DIR$/DEAP_exp/schwefel/schwefel_noise.py" afterPath="$PROJECT_DIR$/DEAP_exp/schwefel/schwefel_noise.py" />
-      <change beforePath="$PROJECT_DIR$/ZOOpt_exp/log/ackley/ackley_20_ave_std.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ZOOpt_exp/log/ackley/ackley_noisy_ave_std.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ZOOpt_exp/log/ackley/ackley_noisy_no_ave_std.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ZOOpt_exp/log/ackley/ackley_noisy_without_handling.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ZOOpt_exp/log/rastrigin/rastrigin_noisy_without_handling.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ZOOpt_exp/log/schwefel/schwefel_noisy_without_handling.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ZOOpt_exp/log/sphere/sphere_20_ave_std.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ZOOpt_exp/log/sphere/sphere_noisy_ave_std.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ZOOpt_exp/log/sphere/sphere_noisy_no_ave_std.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ZOOpt_exp/log/sphere/sphere_noisy_without_handling.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/hyperopt_exp/ackley/ackley_20.py" afterPath="$PROJECT_DIR$/hyperopt_exp/ackley/ackley_20.py" />
-      <change beforePath="$PROJECT_DIR$/hyperopt_exp/log/ackley/ackley_20_ave_std.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/hyperopt_exp/log/sphere/sphere_20_ave_std.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/objective_function/high_dim_function.py" afterPath="$PROJECT_DIR$/objective_function/high_dim_function.py" />
-      <change beforePath="$PROJECT_DIR$/objective_function/noisy_function.py" afterPath="$PROJECT_DIR$/objective_function/noisy_function.py" />
-      <change beforePath="$PROJECT_DIR$/objective_function/ordinary_function.py" afterPath="$PROJECT_DIR$/objective_function/ordinary_function.py" />
-      <change beforePath="$PROJECT_DIR$/plot/get_ave_std.py" afterPath="$PROJECT_DIR$/plot/get_ave_std.py" />
-      <change beforePath="$PROJECT_DIR$/plot/img/ackley.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/plot/img/ackley_20.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/plot/img/ackley_noisy.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/plot/img/figure.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/plot/img/highdim_ackley.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/plot/img/highdim_sphere.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/plot/img/sphere.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/plot/img/sphere_20.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/plot/img/sphere_noisy.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/plot/low_20/plot_ackley_20.py" afterPath="$PROJECT_DIR$/plot/low_20/plot_ackley_20.py" />
+      <change beforePath="$PROJECT_DIR$/plot/plot_func.py" afterPath="$PROJECT_DIR$/plot/plot_func.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -79,61 +23,33 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="run.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CMAES_exp/scale/run.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="18" lean-forward="true" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ordinary_function.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/objective_function/ordinary_function.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="55" column="0" lean-forward="true" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ackley_scale.txt" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/CMAES_exp/log/ackley/ackley_scale.txt">
+      <file leaf-file-name="schwefel_high_dim.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CMAES_exp/schwefel/schwefel_high_dim.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="525">
+              <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#137#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="rastrigin_scale.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CMAES_exp/log/rastrigin/rastrigin_scale.txt">
+      <file leaf-file-name="plot_func.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/plot/plot_func.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ackley_20.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CMAES_exp/log/ackley/ackley_20.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-36648">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="schwefel_scale.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CMAES_exp/log/schwefel/schwefel_scale.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+            <state relative-caret-position="335">
+              <caret line="185" column="32" lean-forward="true" selection-start-line="185" selection-start-column="32" selection-end-line="185" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -142,8 +58,8 @@
       <file leaf-file-name="base_function.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/objective_function/base_function.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-600">
-              <caret line="29" column="11" lean-forward="true" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="11" />
+            <state relative-caret-position="435">
+              <caret line="29" column="11" lean-forward="false" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -231,14 +147,14 @@
         <option value="$PROJECT_DIR$/plot/get_ave_std.py" />
         <option value="$PROJECT_DIR$/objective_function/high_dim_function.py" />
         <option value="$PROJECT_DIR$/CMAES_exp/schwefel/schwefel_20.py" />
-        <option value="$PROJECT_DIR$/CMAES_exp/schwefel/schwefel_high_dim.py" />
         <option value="$PROJECT_DIR$/objective_function/noisy_function.py" />
         <option value="$PROJECT_DIR$/CMAES_exp/schwefel/schwefel_noisy.py" />
         <option value="$PROJECT_DIR$/CMAES_exp/schwefel/schwefel_noisy_without_nh.py" />
         <option value="$PROJECT_DIR$/plot/low_20/plot_func.py" />
-        <option value="$PROJECT_DIR$/plot/plot_func.py" />
         <option value="$PROJECT_DIR$/CMAES_exp/scale/run.py" />
         <option value="$PROJECT_DIR$/objective_function/ordinary_function.py" />
+        <option value="$PROJECT_DIR$/CMAES_exp/schwefel/schwefel_high_dim.py" />
+        <option value="$PROJECT_DIR$/plot/plot_func.py" />
       </list>
     </option>
   </component>
@@ -271,7 +187,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -279,22 +194,6 @@
             <path>
               <item name="ZOOpt_experiment" type="b2602c69:ProjectViewProjectNode" />
               <item name="ZOOpt_experiment" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ZOOpt_experiment" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ZOOpt_experiment" type="462c0819:PsiDirectoryNode" />
-              <item name="CMAES_exp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ZOOpt_experiment" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ZOOpt_experiment" type="462c0819:PsiDirectoryNode" />
-              <item name="CMAES_exp" type="462c0819:PsiDirectoryNode" />
-              <item name="log" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ZOOpt_experiment" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ZOOpt_experiment" type="462c0819:PsiDirectoryNode" />
-              <item name="objective_function" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ZOOpt_experiment" type="b2602c69:ProjectViewProjectNode" />
@@ -310,12 +209,6 @@
               <item name="ZOOpt_experiment" type="b2602c69:ProjectViewProjectNode" />
               <item name="ZOOpt_experiment" type="462c0819:PsiDirectoryNode" />
               <item name="ZOOpt_exp" type="462c0819:PsiDirectoryNode" />
-              <item name="ackley" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ZOOpt_experiment" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ZOOpt_experiment" type="462c0819:PsiDirectoryNode" />
-              <item name="ZOOpt_exp" type="462c0819:PsiDirectoryNode" />
               <item name="log" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -324,19 +217,12 @@
               <item name="ZOOpt_exp" type="462c0819:PsiDirectoryNode" />
               <item name="log" type="462c0819:PsiDirectoryNode" />
               <item name="ackley" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ZOOpt_experiment" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ZOOpt_experiment" type="462c0819:PsiDirectoryNode" />
-              <item name="ZOOpt_exp" type="462c0819:PsiDirectoryNode" />
-              <item name="log" type="462c0819:PsiDirectoryNode" />
-              <item name="ackley" type="462c0819:PsiDirectoryNode" />
-              <item name="ave_std" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -497,15 +383,16 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="877" extended-state="6" />
+    <frame x="0" y="23" width="1440" height="877" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.74680305" sideWeight="0.5028653" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32992327" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32992327" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6342711" sideWeight="0.49713466" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34015346" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32163325" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33887467" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32664755" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Julia Document" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -589,7 +476,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
           <caret line="26" column="23" lean-forward="false" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -597,7 +483,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
           <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -605,7 +490,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -613,7 +497,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -621,9 +504,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="290">
           <caret line="28" column="34" lean-forward="false" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#132#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -631,9 +511,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-130">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#126#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -641,9 +518,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-190">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#129#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -651,9 +525,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-130">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#131#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -661,9 +532,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-130">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#129#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -671,9 +539,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="149">
           <caret line="12" column="18" lean-forward="false" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#127#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -681,7 +546,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="0" column="1563" lean-forward="false" selection-start-line="0" selection-start-column="1563" selection-end-line="0" selection-end-column="1563" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -689,9 +553,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
           <caret line="36" column="54" lean-forward="false" selection-start-line="36" selection-start-column="54" selection-end-line="36" selection-end-column="54" />
-          <folding>
-            <element signature="e#0#34#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -699,7 +560,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -707,7 +567,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
           <caret line="0" column="3562" lean-forward="false" selection-start-line="0" selection-start-column="3562" selection-end-line="0" selection-end-column="3562" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -715,7 +574,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="0" column="1950" lean-forward="false" selection-start-line="0" selection-start-column="1950" selection-end-line="0" selection-end-column="1950" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -723,7 +581,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="630">
           <caret line="0" column="4901" lean-forward="false" selection-start-line="0" selection-start-column="4901" selection-end-line="0" selection-end-column="4901" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -731,7 +588,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-63442">
           <caret line="0" column="2094" lean-forward="false" selection-start-line="0" selection-start-column="2094" selection-end-line="0" selection-end-column="2094" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -739,24 +595,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
           <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#18#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CMAES_exp/log/schwefel/schwefel_10000.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-320797">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CMAES_exp/log/schwefel/schwefel_noisy.txt">
-      <provider selected="true" editor-type-id="LargeFileEditor">
-        <state relative-caret-position="-180769">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -764,9 +602,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="297">
           <caret line="29" column="41" lean-forward="false" selection-start-line="29" selection-start-column="41" selection-end-line="29" selection-end-column="41" />
-          <folding>
-            <element signature="e#0#132#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -784,19 +619,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="245">
           <caret line="106" column="0" lean-forward="false" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#18#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CMAES_exp/schwefel/schwefel_high_dim.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#137#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -804,9 +626,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="263">
           <caret line="32" column="41" lean-forward="false" selection-start-line="32" selection-start-column="41" selection-end-line="32" selection-end-column="41" />
-          <folding>
-            <element signature="e#0#135#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -814,9 +633,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="125">
           <caret line="18" column="14" lean-forward="false" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#135#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -824,7 +640,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -832,9 +647,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="258">
           <caret line="45" column="16" lean-forward="false" selection-start-line="45" selection-start-column="16" selection-end-line="45" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#15#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -842,7 +654,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -850,9 +661,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-853">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#31#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -860,9 +668,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#124#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -877,15 +682,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="139">
           <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plot/plot_func.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="885">
-          <caret line="144" column="0" lean-forward="false" selection-start-line="144" selection-start-column="0" selection-end-line="144" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -893,7 +689,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -901,7 +696,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -916,28 +710,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CMAES_exp/log/schwefel/schwefel_20.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8194">
-          <caret line="0" column="1738" lean-forward="false" selection-start-line="0" selection-start-column="1738" selection-end-line="0" selection-end-column="1738" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CMAES_exp/log/schwefel/schwefel_noisy_without_nh.txt">
-      <provider selected="true" editor-type-id="LargeFileEditor">
-        <state relative-caret-position="-26839">
-          <caret line="0" column="1392" lean-forward="true" selection-start-line="0" selection-start-column="1392" selection-end-line="0" selection-end-column="1392" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CMAES_exp/log/ackley/ackley_20.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-36648">
+        <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
@@ -947,30 +725,29 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CMAES_exp/scale/run.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
-          <caret line="3" column="18" lean-forward="true" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
+          <caret line="3" column="18" lean-forward="false" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/objective_function/base_function.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-600">
-          <caret line="29" column="11" lean-forward="true" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="11" />
+        <state relative-caret-position="435">
+          <caret line="29" column="11" lean-forward="false" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="11" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/objective_function/ordinary_function.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="55" column="0" lean-forward="true" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -978,7 +755,7 @@
     <entry file="file://$PROJECT_DIR$/CMAES_exp/log/rastrigin/rastrigin_scale.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -986,7 +763,7 @@
     <entry file="file://$PROJECT_DIR$/CMAES_exp/log/schwefel/schwefel_scale.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -994,7 +771,55 @@
     <entry file="file://$PROJECT_DIR$/CMAES_exp/log/ackley/ackley_scale.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMAES_exp/log/schwefel/schwefel_noisy.txt">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMAES_exp/log/schwefel/schwefel_20.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="0" column="5046" lean-forward="true" selection-start-line="0" selection-start-column="5046" selection-end-line="0" selection-end-column="5046" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMAES_exp/log/schwefel/schwefel_noisy_without_nh.txt">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state relative-caret-position="15">
+          <caret line="0" column="1392" lean-forward="false" selection-start-line="0" selection-start-column="1392" selection-end-line="0" selection-end-column="1392" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMAES_exp/log/schwefel/schwefel_10000.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-30432">
+          <caret line="0" column="725" lean-forward="false" selection-start-line="0" selection-start-column="725" selection-end-line="0" selection-end-column="725" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMAES_exp/schwefel/schwefel_high_dim.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#137#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plot/plot_func.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="335">
+          <caret line="185" column="32" lean-forward="true" selection-start-line="185" selection-start-column="32" selection-end-line="185" selection-end-column="32" />
           <folding />
         </state>
       </provider>

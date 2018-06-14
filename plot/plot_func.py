@@ -124,6 +124,44 @@ def plot_scale(func_name):
     plt.close()
 
 
+def plot_high_dim(cut, func_name):
+    txt_name = func_name + '_10000.txt'
+    zoopt_sre_name = func_name + '_10000_sre.txt'
+    zoopt = np.loadtxt('ZOOpt_exp/log/' + func_name + '/ave_std/' + txt_name)
+    zoopt_ave = zoopt[0][cut:]
+    zoopt_std = zoopt[1][cut:]
+    zoopt_sre = np.loadtxt('ZOOpt_exp/log/' + func_name + '/ave_std/' + zoopt_sre_name)
+    zoopt_sre_ave = zoopt_sre[0][cut:]
+    zoopt_sre_std = zoopt_sre[1][cut:]
+    cmaes = np.loadtxt('CMAES_exp/log/' + func_name + '/ave_std/' + txt_name)
+    cmaes_ave = cmaes[0][cut:]
+    cmaes_std = cmaes[1][cut:]
+    deap = np.loadtxt('DEAP_exp/log/' + func_name + '/ave_std/' + txt_name)
+    deap_ave = deap[0][cut:]
+    deap_std = deap[1][cut:]
+    x = np.arange(1 + cut, 10001, 1)
+    plt.fill_between(x, zoopt_ave - zoopt_std, zoopt_ave + zoopt_std, facecolor='red', alpha=0.3)
+    plt.plot(x, zoopt_ave, 'r-', label='ZOOpt')
+    plt.fill_between(x, zoopt_sre_ave - zoopt_sre_std, zoopt_sre_ave + zoopt_sre_std, facecolor='rosybrown', alpha=0.3)
+    plt.plot(x, zoopt_sre_ave, '-', color='rosybrown', label='ZOOpt-sre')
+    plt.fill_between(x, cmaes_ave - cmaes_std, cmaes_ave + cmaes_std, facecolor='green', alpha=0.3)
+    plt.plot(x, cmaes_ave, 'g-', label='CMA-ES')
+    plt.fill_between(x, deap_ave - deap_std, deap_ave + deap_std, facecolor='blue', alpha=0.1)
+    plt.plot(x, deap_ave, 'b-', label='DEAP')
+    plt.xlim(xmin=0)
+    plt.ylim(ymin=0)
+    plt.xlabel('budget')
+    plt.ylabel('error')
+    upper_fn = func_name[0].upper() + func_name[1:]
+    plt.title(upper_fn)
+    plt.legend()
+    save_txt1 = func_name + '_10000.pdf'
+    save_txt2 = func_name + '_10000.png'
+    plt.savefig('plot/img/' + func_name + '/' + save_txt1, dpi=400)
+    plt.savefig('plot/img/' + func_name + '/' + save_txt2, dpi=400)
+    plt.close()
+
+
 if __name__ == '__main__':
     # plot_low_dim(100, 'ackley', '20')
     # plot_low_dim(100, 'sphere', '20')
@@ -138,7 +176,13 @@ if __name__ == '__main__':
     # plot_noisy(25000, 'schwefel', 200000, 1)
 
     # plot_scale('ackley')
-    plot_scale('sphere')
-    plot_scale('griewank')
-    plot_scale('rastrigin')
-    plot_scale('schwefel')
+    # plot_scale('sphere')
+    # plot_scale('griewank')
+    # plot_scale('rastrigin')
+    # plot_scale('schwefel')
+
+    # plot_high_dim(0, 'ackley')
+    # plot_high_dim(0, 'sphere')
+    plot_high_dim(0, 'griewank')
+    # plot_high_dim(0, 'rastrigin')
+    plot_high_dim(0, 'schwefel')
