@@ -1,9 +1,6 @@
 import numpy as np
 from objective_function.base_function import sphere, ackley, rastrigin, griewank, schwefel, set_optimal_position
-
-
-# set_optimal_position('/Users/liu/Desktop/CS/ZOOpt_exp/ZOOpt_experiment/objective_function/optimal_position/sphere_100.txt')
-
+from objective_function.ordinary_function import func_for_cmaes
 
 def func_noise_creator(func, mu, sigma):
     return lambda x: func(x) + np.random.normal(mu, sigma)
@@ -38,8 +35,6 @@ def ackley_noise_zoopt(solution):
     return ackley_noise_log(x)
 
 
-############################################
-# objective functions which records intermediate result.
 all_epoch = []
 true_epoch = []
 epoch_cnt = 0
@@ -97,13 +92,24 @@ def schwefel_noise_log(x):
     return func_noise_log(schwefel_noisy, schwefel, x)
 
 
+def sphere_noise_for_cmaes(x):
+    return func_for_cmaes(sphere_noise_for_cmaes, 1, x)
+
+
+def ackley_noise_for_cmaes(x):
+    return func_for_cmaes(ackley_noise_for_cmaes, 1, x)
+
+
+def griewank_noise_for_cmaes(x):
+    return func_for_cmaes(griewank_noise_for_cmaes, 10, x)
+
+
+def rastrigin_noise_for_cmaes(x):
+    return func_for_cmaes(rastrigin_noise_for_cmaes, 5, x)
+
+
 def schwefel_noise_for_cmaes(x):
-    for i in range(len(x)):
-        if x[i] > 500:
-            x[i] = 500
-        elif x[i] < -500:
-            x[i] = -500
-    return schwefel_noise_log(x)
+    return func_for_cmaes(schwefel_noise_for_cmaes, 500, x)
 
 
 def clear_noisy_global():

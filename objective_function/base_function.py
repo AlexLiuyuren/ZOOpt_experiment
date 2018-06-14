@@ -109,4 +109,11 @@ def griewank_high(x):
 
 
 def schwefel_high(x):
-    return function_high(schwefel, x)
+    x1 = x[:10]
+    x2 = x[10:]
+    value1 = schwefel(x1)
+    value2 = 0
+    for i in range(len(x2)):
+        value2 += (x2[i] - optimal_position[i + 10]) * (x2[i] - optimal_position[i + 10])
+    value2 /= len(x) * len(x)
+    return value1 + value2

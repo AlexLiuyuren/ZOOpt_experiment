@@ -40,7 +40,7 @@ def ZOOpt_ave_std(func_name):
 
 def CMAES_ave_std(func_name):
     get_ave_std('CMAES_exp', func_name, '20')
-    # get_ave_std('CMAES_exp', func_name, '10000')
+    get_ave_std('CMAES_exp', func_name, '10000')
     get_ave_std('CMAES_exp', func_name, 'noisy')
     get_ave_std('CMAES_exp', func_name, 'noisy_without_nh')
     get_ave_std_scale('CMAES_exp', func_name)
@@ -66,7 +66,7 @@ if __name__ == '__main__':
 
     # CMAES_ave_std('griewank')
     # CMAES_ave_std('rastrigin')
-    # CMAES_ave_std('schwefel')
+    CMAES_ave_std('schwefel')
     # CMAES_ave_std('ackley')
     # CMAES_ave_std('sphere')
 
@@ -77,8 +77,8 @@ if __name__ == '__main__':
     # DEAP_ave_std('sphere')
 
     # hyperopt_ave_std('griewank')
-    hyperopt_ave_std('rastrigin')
-    hyperopt_ave_std('schwefel')
+    # hyperopt_ave_std('rastrigin')
+    # hyperopt_ave_std('schwefel')
     # hyperopt_ave_std('ackley')
     # hyperopt_ave_std('sphere')
 

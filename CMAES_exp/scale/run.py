@@ -1,11 +1,11 @@
 from objective_function.base_function import set_optimal_position
-from objective_function.ordinary_function import sphere_log, ackley_log, griewank_log, rastrigin_log, schwefel_log, \
-    get_epoch_cnt, clear_noisy_global, set_epoch_len
+from objective_function.ordinary_function import sphere_for_cmaes, ackley_for_cmaes, griewank_for_cmaes, \
+    rastrigin_for_cmaes, schwefel_for_cmaes, get_epoch_cnt, clear_all, set_epoch_len
 import numpy as np
 import cma
 
 dim_list = [20, 200, 400, 600, 800, 1000]
-func_list = [sphere_log, ackley_log, griewank_log, rastrigin_log, schwefel_log]
+func_list = [sphere_for_cmaes, ackley_for_cmaes, griewank_for_cmaes, rastrigin_for_cmaes, schwefel_for_cmaes]
 func_name = ['sphere', 'ackley', 'griewank', 'rastrigin', 'schwefel']
 search_list = [1, 1, 10, 5, 500]
 
@@ -30,7 +30,7 @@ def exp(func_no, dim_no):
         solutions = es.ask()
         es.tell(solutions, [func_list[func_no](x) for x in solutions])
         es.logger.add()
-    clear_noisy_global()
+    clear_all()
     sol = es.result_pretty().fbest
     return sol
 
@@ -47,7 +47,7 @@ if __name__ == '__main__':
             func_result.append(dim_result)
             print(i)
         np.savetxt(get_save_txt(func_no), np.array(func_result))
-    # repeat = 10
+    # repeat = 1
     # func_result = []
     # func_no_list = [3, 4]
     # for func_no in func_no_list:

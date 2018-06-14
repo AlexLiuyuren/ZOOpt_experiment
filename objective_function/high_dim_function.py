@@ -1,6 +1,6 @@
 import numpy as np
 from objective_function.base_function import sphere_high, ackley_high, griewank_high, rastrigin_high, schwefel_high
-
+from objective_function.ordinary_function import func_for_cmaes
 
 all_epoch = []
 epoch = []
@@ -58,13 +58,24 @@ def schwefel_high_log(x):
     return function_high_log(schwefel_high, x)
 
 
+def sphere_high_for_cmaes(x):
+    return func_for_cmaes(sphere_high, 1, x)
+
+
+def ackley_high_for_cmaes(x):
+    return func_for_cmaes(ackley_high, 1, x)
+
+
+def rastrigin_high_for_cmaes(x):
+    return func_for_cmaes(rastrigin_high, 5, x)
+
+
+def griewank_high_for_cmaes(x):
+    return func_for_cmaes(griewank_high, 10, x)
+
+
 def schwefel_high_for_cmaes(x):
-    for i in range(len(x)):
-        if x[i] > 500:
-            x[i] = 500
-        elif x[i] < -500:
-            x[i] = -500
-    return function_high_log(schwefel_high, x)
+    return func_for_cmaes(schwefel_high, 500, x)
 
 
 def clear_noisy_global():

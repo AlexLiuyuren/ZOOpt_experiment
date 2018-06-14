@@ -3,6 +3,25 @@
   <component name="ChangeListManager">
     <list default="true" id="3d9d1730-8a98-4edc-b0b2-6160303766f6" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/CMAES_exp/log/schwefel/ave_std/schwefel_20.txt" afterPath="$PROJECT_DIR$/CMAES_exp/log/schwefel/ave_std/schwefel_20.txt" />
+      <change beforePath="$PROJECT_DIR$/CMAES_exp/log/schwefel/ave_std/schwefel_noisy.txt" afterPath="$PROJECT_DIR$/CMAES_exp/log/schwefel/ave_std/schwefel_noisy.txt" />
+      <change beforePath="$PROJECT_DIR$/CMAES_exp/log/schwefel/ave_std/schwefel_noisy_without_nh.txt" afterPath="$PROJECT_DIR$/CMAES_exp/log/schwefel/ave_std/schwefel_noisy_without_nh.txt" />
+      <change beforePath="$PROJECT_DIR$/CMAES_exp/log/schwefel/ave_std/schwefel_scale.txt" afterPath="$PROJECT_DIR$/CMAES_exp/log/schwefel/ave_std/schwefel_scale.txt" />
+      <change beforePath="$PROJECT_DIR$/CMAES_exp/log/schwefel/schwefel_20.txt" afterPath="$PROJECT_DIR$/CMAES_exp/log/schwefel/schwefel_20.txt" />
+      <change beforePath="$PROJECT_DIR$/CMAES_exp/log/schwefel/schwefel_noisy.txt" afterPath="$PROJECT_DIR$/CMAES_exp/log/schwefel/schwefel_noisy.txt" />
+      <change beforePath="$PROJECT_DIR$/CMAES_exp/log/schwefel/schwefel_noisy_without_nh.txt" afterPath="$PROJECT_DIR$/CMAES_exp/log/schwefel/schwefel_noisy_without_nh.txt" />
+      <change beforePath="$PROJECT_DIR$/CMAES_exp/scale/run.py" afterPath="$PROJECT_DIR$/CMAES_exp/scale/run.py" />
+      <change beforePath="$PROJECT_DIR$/objective_function/base_function.py" afterPath="$PROJECT_DIR$/objective_function/base_function.py" />
+      <change beforePath="$PROJECT_DIR$/objective_function/high_dim_function.py" afterPath="$PROJECT_DIR$/objective_function/high_dim_function.py" />
+      <change beforePath="$PROJECT_DIR$/objective_function/noisy_function.py" afterPath="$PROJECT_DIR$/objective_function/noisy_function.py" />
+      <change beforePath="$PROJECT_DIR$/objective_function/ordinary_function.py" afterPath="$PROJECT_DIR$/objective_function/ordinary_function.py" />
+      <change beforePath="$PROJECT_DIR$/plot/get_ave_std.py" afterPath="$PROJECT_DIR$/plot/get_ave_std.py" />
+      <change beforePath="$PROJECT_DIR$/plot/img/ackley/ackley_10000.pdf" afterPath="$PROJECT_DIR$/plot/img/ackley/ackley_10000.pdf" />
+      <change beforePath="$PROJECT_DIR$/plot/img/schwefel/schwefel_10000.pdf" afterPath="$PROJECT_DIR$/plot/img/schwefel/schwefel_10000.pdf" />
+      <change beforePath="$PROJECT_DIR$/plot/img/schwefel/schwefel_20.pdf" afterPath="$PROJECT_DIR$/plot/img/schwefel/schwefel_20.pdf" />
+      <change beforePath="$PROJECT_DIR$/plot/img/schwefel/schwefel_20.png" afterPath="$PROJECT_DIR$/plot/img/schwefel/schwefel_20.png" />
+      <change beforePath="$PROJECT_DIR$/plot/img/schwefel/schwefel_noisy.pdf" afterPath="$PROJECT_DIR$/plot/img/schwefel/schwefel_noisy.pdf" />
+      <change beforePath="$PROJECT_DIR$/plot/img/schwefel/schwefel_noisy.png" afterPath="$PROJECT_DIR$/plot/img/schwefel/schwefel_noisy.png" />
       <change beforePath="$PROJECT_DIR$/plot/plot_func.py" afterPath="$PROJECT_DIR$/plot/plot_func.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,12 +42,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="run.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/CMAES_exp/scale/run.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="292">
+              <caret line="20" column="14" lean-forward="true" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
+              <folding>
+                <element signature="e#0#65#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="ordinary_function.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/objective_function/ordinary_function.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="30">
+              <caret line="64" column="25" lean-forward="true" selection-start-line="64" selection-start-column="25" selection-end-line="64" selection-end-column="25" />
+              <folding>
+                <element signature="e#0#90#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -45,11 +78,45 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="plot_func.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="high_dim_function.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/objective_function/high_dim_function.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="674">
+              <caret line="70" column="0" lean-forward="true" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="noisy_function.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/objective_function/noisy_function.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="405">
+              <caret line="27" column="33" lean-forward="true" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="plot_func.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/plot/plot_func.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="335">
-              <caret line="185" column="32" lean-forward="true" selection-start-line="185" selection-start-column="32" selection-end-line="185" selection-end-column="32" />
+            <state relative-caret-position="2185">
+              <caret line="175" column="44" lean-forward="false" selection-start-line="175" selection-start-column="44" selection-end-line="175" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="get_ave_std.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/plot/get_ave_std.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="14" column="17" lean-forward="false" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -58,8 +125,8 @@
       <file leaf-file-name="base_function.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/objective_function/base_function.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="29" column="11" lean-forward="false" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="11" />
+            <state relative-caret-position="120">
+              <caret line="8" column="37" lean-forward="true" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -104,7 +171,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/CMAES_exp/sphere/sphere_noisy_without_nh.py" />
         <option value="$PROJECT_DIR$/CMAES_exp/sphere/sphere_20.py" />
         <option value="$PROJECT_DIR$/CMAES_exp/sphere/sphere_high_dim.py" />
         <option value="$PROJECT_DIR$/CMAES_exp/griewank/griewank_20.py" />
@@ -144,17 +210,18 @@
         <option value="$PROJECT_DIR$/CMAES_exp/rastrigin/rastrigin_high_dim.py" />
         <option value="$PROJECT_DIR$/hyperopt_exp/log/rastrigin/rastrigin_20.txt" />
         <option value="$PROJECT_DIR$/hyperopt_exp/log/schwefel/schwefel_20.txt" />
-        <option value="$PROJECT_DIR$/plot/get_ave_std.py" />
-        <option value="$PROJECT_DIR$/objective_function/high_dim_function.py" />
         <option value="$PROJECT_DIR$/CMAES_exp/schwefel/schwefel_20.py" />
-        <option value="$PROJECT_DIR$/objective_function/noisy_function.py" />
         <option value="$PROJECT_DIR$/CMAES_exp/schwefel/schwefel_noisy.py" />
         <option value="$PROJECT_DIR$/CMAES_exp/schwefel/schwefel_noisy_without_nh.py" />
         <option value="$PROJECT_DIR$/plot/low_20/plot_func.py" />
-        <option value="$PROJECT_DIR$/CMAES_exp/scale/run.py" />
-        <option value="$PROJECT_DIR$/objective_function/ordinary_function.py" />
         <option value="$PROJECT_DIR$/CMAES_exp/schwefel/schwefel_high_dim.py" />
         <option value="$PROJECT_DIR$/plot/plot_func.py" />
+        <option value="$PROJECT_DIR$/plot/get_ave_std.py" />
+        <option value="$PROJECT_DIR$/objective_function/ordinary_function.py" />
+        <option value="$PROJECT_DIR$/CMAES_exp/scale/run.py" />
+        <option value="$PROJECT_DIR$/objective_function/base_function.py" />
+        <option value="$PROJECT_DIR$/objective_function/high_dim_function.py" />
+        <option value="$PROJECT_DIR$/objective_function/noisy_function.py" />
       </list>
     </option>
   </component>
@@ -198,25 +265,28 @@
             <path>
               <item name="ZOOpt_experiment" type="b2602c69:ProjectViewProjectNode" />
               <item name="ZOOpt_experiment" type="462c0819:PsiDirectoryNode" />
+              <item name="CMAES_exp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ZOOpt_experiment" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ZOOpt_experiment" type="462c0819:PsiDirectoryNode" />
+              <item name="CMAES_exp" type="462c0819:PsiDirectoryNode" />
+              <item name="scale" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ZOOpt_experiment" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ZOOpt_experiment" type="462c0819:PsiDirectoryNode" />
+              <item name="objective_function" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ZOOpt_experiment" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ZOOpt_experiment" type="462c0819:PsiDirectoryNode" />
               <item name="plot" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ZOOpt_experiment" type="b2602c69:ProjectViewProjectNode" />
               <item name="ZOOpt_experiment" type="462c0819:PsiDirectoryNode" />
               <item name="ZOOpt_exp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ZOOpt_experiment" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ZOOpt_experiment" type="462c0819:PsiDirectoryNode" />
-              <item name="ZOOpt_exp" type="462c0819:PsiDirectoryNode" />
-              <item name="log" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ZOOpt_experiment" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ZOOpt_experiment" type="462c0819:PsiDirectoryNode" />
-              <item name="ZOOpt_exp" type="462c0819:PsiDirectoryNode" />
-              <item name="log" type="462c0819:PsiDirectoryNode" />
-              <item name="ackley" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -391,7 +461,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32992327" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32992327" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6342711" sideWeight="0.49713466" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33887467" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33887467" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32664755" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Julia Document" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -451,20 +521,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ZOOpt_exp/log/ackley/ave_std/ackley_noisy.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ZOOpt_exp/log/ackley/ave_std/ackley_20.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ZOOpt_exp/log/sphere/sphere_20.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -591,34 +647,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plot/get_ave_std.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CMAES_exp/schwefel/schwefel_20.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="297">
           <caret line="29" column="41" lean-forward="false" selection-start-line="29" selection-start-column="41" selection-end-line="29" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/objective_function/high_dim_function.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="66" column="46" lean-forward="false" selection-start-line="61" selection-start-column="4" selection-end-line="66" selection-end-column="46" />
-          <folding>
-            <element signature="e#0#18#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/objective_function/noisy_function.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="106" column="0" lean-forward="false" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -728,30 +760,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CMAES_exp/scale/run.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="18" lean-forward="false" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/objective_function/base_function.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="11" lean-forward="false" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/objective_function/ordinary_function.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CMAES_exp/log/rastrigin/rastrigin_scale.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -806,6 +814,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/plot/plot_func.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2185">
+          <caret line="175" column="44" lean-forward="false" selection-start-line="175" selection-start-column="44" selection-end-line="175" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMAES_exp/ackley/ackley_20.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#124#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMAES_exp/ackley/ackley_noisy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#112#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plot/get_ave_std.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="14" column="17" lean-forward="false" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/CMAES_exp/schwefel/schwefel_high_dim.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
@@ -816,11 +860,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plot/plot_func.py">
+    <entry file="file://$PROJECT_DIR$/objective_function/noisy_function.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="185" column="32" lean-forward="true" selection-start-line="185" selection-start-column="32" selection-end-line="185" selection-end-column="32" />
+        <state relative-caret-position="405">
+          <caret line="27" column="33" lean-forward="true" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/objective_function/high_dim_function.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="674">
+          <caret line="70" column="0" lean-forward="true" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/objective_function/ordinary_function.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="64" column="25" lean-forward="true" selection-start-line="64" selection-start-column="25" selection-end-line="64" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#90#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/objective_function/base_function.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="37" lean-forward="true" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMAES_exp/scale/run.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="20" column="14" lean-forward="true" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#65#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
