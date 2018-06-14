@@ -97,6 +97,15 @@ def schwefel_noise_log(x):
     return func_noise_log(schwefel_noisy, schwefel, x)
 
 
+def schwefel_noise_for_cmaes(x):
+    for i in range(len(x)):
+        if x[i] > 500:
+            x[i] = 500
+        elif x[i] < -500:
+            x[i] = -500
+    return schwefel_noise_log(x)
+
+
 def clear_noisy_global():
     global epoch, pcount, epoch_cnt, true_epoch, best_result
     true_epoch = []

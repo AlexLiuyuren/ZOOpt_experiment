@@ -28,6 +28,6 @@ if __name__ == '__main__':
         print('repeat', i)
         sol = minimize_rastrigin()
     all_epoch = np.array(get_all_epoch())
-    np.savetxt('CMAES_exp/log/rastrigin/rastrigin_high_dim.txt', all_epoch)
+    np.savetxt('CMAES_exp/log/rastrigin/rastrigin_10000.txt', all_epoch)
     print(all_epoch.shape)
 

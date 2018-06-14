@@ -16,15 +16,6 @@ def minimize_ackley():
         # es.disp()
     clear_noisy_global()
     sol = es.result_pretty()
-    # nh = cma.NoiseHandler(es.N, maxevals=[1, 1, 30])
-    # while get_epoch_cnt() < 1:
-    #      X, fit_vals = es.ask_and_eval(ackley_log, evaluations=nh.evaluations)
-    #      es.tell(X, fit_vals)  # prepare for next iteration
-    #      es.sigma *= nh(X, fit_vals, ackley_noise_log, es.ask)  # see method __call__
-    #      es.countevals += nh.evaluations_just_done  # this is a hack, not important though
-    #      es.logger.add(more_data=[nh.evaluations, nh.noiseS])  # add a data point
-    # clear_noisy_global()
-    # sol=es.result[-2]
     return sol
 
 

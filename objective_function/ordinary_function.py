@@ -58,6 +58,15 @@ def schwefel_log(x):
     return function_log(schwefel, x)
 
 
+def func_for_cmaes(func, x):
+    for i in range(len(x)):
+        if x[i] > 500:
+            x[i] = 500
+        elif x[i] < -500:
+            x[i] = -500
+    return function_log(schwefel, x)
+
+
 def clear_noisy_global():
     global epoch, pcount, epoch_cnt, best_result
     epoch = []
