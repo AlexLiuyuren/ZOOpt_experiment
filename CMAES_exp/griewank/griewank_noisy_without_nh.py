@@ -1,4 +1,4 @@
-from objective_function.noisy_function import griewank_noise_log, get_all_epoch, get_epoch_cnt, clear_noisy_global, set_epoch_len
+from objective_function.noisy_function import griewank_noise_for_cmaes, get_all_epoch, get_epoch_cnt, clear_noisy_global, set_epoch_len
 from objective_function.base_function import set_optimal_position
 import numpy as np
 import cma
@@ -12,7 +12,7 @@ def minimize_griewank():
     es = cma.CMAEvolutionStrategy(init_pos, 3)  # doctest: +ELLIPSIS
     while get_epoch_cnt() < 1:
         solutions = es.ask()
-        es.tell(solutions, [griewank_noise_log(x) for x in solutions])
+        es.tell(solutions, [griewank_noise_for_cmaes(x) for x in solutions])
         es.logger.add()
     clear_noisy_global()
     sol = es.result_pretty()
