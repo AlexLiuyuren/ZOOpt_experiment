@@ -36,7 +36,7 @@ def exp(func_no, dim_no):
 
 
 if __name__ == '__main__':
-    repeat = 10
+    repeat = 5
     for func_no in range(len(func_list)):
         print(get_save_txt(func_no))
         func_result = []
