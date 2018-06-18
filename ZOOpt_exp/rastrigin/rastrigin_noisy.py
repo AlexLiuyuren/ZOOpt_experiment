@@ -7,13 +7,13 @@ import numpy as np
 if __name__ == '__main__':
     repeat_num = 10
     set_optimal_position(
-        "objective_function/optimal_position/rastrigin/rastrigin_100.txt")
-    budget = 200000
+        "objective_function/optimal_position/rastrigin/rastrigin_20.txt")
+    budget = 40000
     set_epoch_len(budget)
     gl.set_seed(666)
     dim_lim = 5
     for i in range(repeat_num):
-        dim_size = 100  # dimensions
+        dim_size = 20  # dimensions
         dim_regs = [[-1 * dim_lim, dim_lim]] * dim_size  # dimension range
         dim_tys = [True] * dim_size  # dimension type : real
         dim = Dimension(dim_size, dim_regs, dim_tys)  # form up the dimension object
@@ -22,7 +22,7 @@ if __name__ == '__main__':
                               resample_times=50, balance_rate=0.5)
 
         # parameter = Parameter(budget=budget, noise_handling=True, resampling=True, resample_times=10)
-        parameter.set_positive_size(5)
+        # parameter.set_positive_size(5)
         sol = Opt.min(objective, parameter)
         clear_noisy_global()
     all_epoch = np.array(get_all_epoch())

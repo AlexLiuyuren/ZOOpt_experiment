@@ -10,7 +10,7 @@ from deap import creator
 from deap import tools
 
 
-dim_size = 100
+dim_size = 20
 dim_lim = 5
 speed_lim = 1
 
@@ -59,7 +59,7 @@ def minimize_rastrigin_continuous_noisy():
     logbook = tools.Logbook()
     logbook.header = ["gen", "evals"] + stats.fields
 
-    GEN = int(200000 / population)
+    GEN = int(40000 / population)
     best = None
     i = 0
     for g in range(GEN):
@@ -84,9 +84,9 @@ def minimize_rastrigin_continuous_noisy():
 
 if __name__ == "__main__":
     set_optimal_position(
-        'objective_function/optimal_position/rastrigin/rastrigin_100.txt')
+        'objective_function/optimal_position/rastrigin/rastrigin_20.txt')
     repeat = 10
-    set_epoch_len(200000)
+    set_epoch_len(40000)
     for i in range(repeat):
         minimize_rastrigin_continuous_noisy()
     all_epoch = np.array(get_all_epoch())

@@ -14,8 +14,8 @@ creator.create("FitnessMin", base.Fitness, weights=(-1.0,))
 creator.create("Particle", list, fitness=creator.FitnessMin, speed=list,
     smin=None, smax=None, best=None)
 dim_size = 10000
-dim_lim = 10
-speed_lim = 2
+dim_lim = 500
+speed_lim = 50
 
 
 def generate(size, pmin, pmax, smin, smax):
@@ -89,6 +89,6 @@ if __name__ == '__main__':
         minimize_schwefel_continuous()
         print(i)
     all_epoch = np.array(get_all_epoch())
-    np.savetxt('DEAP_exp/log/schwefel/schwefel_high_dim.txt', all_epoch)
+    np.savetxt('DEAP_exp/log/schwefel/schwefel_10000.txt', all_epoch)
     print(all_epoch.shape)
 

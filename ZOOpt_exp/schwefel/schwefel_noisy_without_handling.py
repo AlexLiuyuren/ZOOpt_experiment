@@ -7,13 +7,13 @@ import numpy as np
 if __name__ == '__main__':
     repeat_num = 10
     set_optimal_position(
-        "objective_function/optimal_position/schwefel/schwefel_100.txt")
+        "objective_function/optimal_position/schwefel/schwefel_20.txt")
     gl.set_seed(666)
-    budget = 200000
+    budget = 40000
     set_epoch_len(budget)
-    dim_lim = 5
+    dim_lim = 500
     for i in range(repeat_num):
-        dim_size = 100  # dimensions
+        dim_size = 20  # dimensions
         dim_regs = [[-1 * dim_lim, dim_lim]] * dim_size  # dimension range
         dim_tys = [True] * dim_size  # dimension type : real
         dim = Dimension(dim_size, dim_regs, dim_tys)  # form up the dimension object
@@ -22,5 +22,5 @@ if __name__ == '__main__':
         sol = Opt.min(objective, parameter)
         clear_noisy_global()
     all_epoch = np.array(get_all_epoch())
-    np.savetxt('ZOOpt_exp/log/schwefel/schwefel_noisy_without_handling.txt', all_epoch)
+    np.savetxt('ZOOpt_exp/log/schwefel/schwefel_noisy_without_nh.txt', all_epoch)
     print(all_epoch.shape)

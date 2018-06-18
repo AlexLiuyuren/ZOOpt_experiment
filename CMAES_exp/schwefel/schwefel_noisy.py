@@ -4,7 +4,7 @@ import cma
 import numpy as np
 
 
-dim_size = 100
+dim_size = 20
 dim_lim = 500
 
 
@@ -26,8 +26,8 @@ def minimize_schwefel_continuous_noisy():
 
 if __name__ == '__main__':
     repeat = 10
-    set_optimal_position("objective_function/optimal_position/schwefel/schwefel_100.txt")
-    set_epoch_len(200000)
+    set_optimal_position("objective_function/optimal_position/schwefel/schwefel_20.txt")
+    set_epoch_len(40000)
     for i in range(repeat):
         sol = minimize_schwefel_continuous_noisy()
     all_epoch = np.array(get_all_epoch())

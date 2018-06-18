@@ -9,9 +9,9 @@ def func_noise_creator(func, mu, sigma):
 
 sphere_noisy = func_noise_creator(sphere, 0, 1)
 ackley_noisy = func_noise_creator(ackley, 0, 0.1)
-rastrigin_noisy = func_noise_creator(rastrigin, 0, 1)
+rastrigin_noisy = func_noise_creator(rastrigin, 0, 10)
 griewank_noisy = func_noise_creator(griewank, 0, 0.1)
-schwefel_noisy = func_noise_creator(schwefel, 0, 1)
+schwefel_noisy = func_noise_creator(schwefel, 0, 100)
 
 
 ############################################

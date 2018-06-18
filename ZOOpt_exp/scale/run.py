@@ -30,18 +30,20 @@ def exp(func_no, dim_no):
     budget = dim_size * 100  # 20*dim_size  # number of calls to the objective function
     parameter = Parameter(budget=budget)
     sol = Opt.min(objective, parameter)
+    sol.print_solution()
     return sol.get_value()
 
 
 if __name__ == '__main__':
-    repeat = 10
-    for func_no in range(len(func_list)):
-        print(get_save_txt(func_no))
-        func_result = []
-        for i in range(repeat):
-            dim_result = []
-            for j in range(len(dim_list)):
-                dim_result.append(exp(func_no, j))
-            func_result.append(dim_result)
-            print(i)
-        np.savetxt(get_save_txt(func_no), np.array(func_result))
+    # repeat = 10
+    # for func_no in range(len(func_list)):
+    #     print(get_save_txt(func_no))
+    #     func_result = []
+    #     for i in range(repeat):
+    #         dim_result = []
+    #         for j in range(len(dim_list)):
+    #             dim_result.append(exp(func_no, j))
+    #         func_result.append(dim_result)
+    #         print(i)
+    #     np.savetxt(get_save_txt(func_no), np.array(func_result))
+    sol = exp(1, 1)

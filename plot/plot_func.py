@@ -29,8 +29,8 @@ def plot_low_dim(cut, func_name, dim_name):
     plt.plot(x, deap_ave, 'b-', label='DEAP')
     plt.fill_between(x, hyperopt_ave - hyperopt_std, hyperopt_ave + hyperopt_std, facecolor='orange', alpha=0.3)
     plt.plot(x, hyperopt_ave, '-', color='orange', label='Hyperopt')
-    plt.xlabel('budget')
-    plt.ylabel('error')
+    plt.xlabel('Budget')
+    plt.ylabel('Error')
     upper_fn = func_name[0].upper() + func_name[1:]
     plt.title(upper_fn + ', dimension=' + dim_name)
     plt.xlim(xmin=0)
@@ -43,7 +43,7 @@ def plot_low_dim(cut, func_name, dim_name):
     plt.close()
 
 
-def plot_noisy(cut, func_name, budget, sigma):
+def plot_noisy(cut, func_name, budget, dim=100):
     txt_name = func_name + '_' + 'noisy.txt'
     txt_without_nh_name = func_name + '_' + 'noisy_without_nh.txt'
     zoopt = np.loadtxt('ZOOpt_exp/log/' + func_name + '/ave_std/' + txt_name)
@@ -82,10 +82,10 @@ def plot_noisy(cut, func_name, budget, sigma):
 
     plt.fill_between(x, deap_ave - deap_std, deap_ave + deap_std, facecolor='blue', alpha=0.3)
     plt.plot(x, deap_ave, 'b-', label='DEAP')
-    plt.xlabel('budget')
-    plt.ylabel('error')
+    plt.xlabel('Budget')
+    plt.ylabel('Error')
     upper_fn = func_name[0].upper() + func_name[1:]
-    plt.title(upper_fn + ', dim=100, sigma=' + str(sigma))
+    plt.title(upper_fn + ', dimension=' + str(dim))
     plt.xlim(xmin=0)
     plt.ylim(ymin=0)
     plt.legend()
@@ -112,8 +112,8 @@ def plot_scale(func_name):
     plt.errorbar(dim, zoopt_ave, yerr=zoopt_std, label='ZOOpt', color='red', fmt='-')
     plt.errorbar(dim, cmaes_ave, yerr=cmaes_std, label='CMA-ES', color='green', fmt='-')
     plt.errorbar(dim, deap_ave, yerr=deap_std, label='DEAP', color='blue', fmt='-')
-    plt.xlabel('dimension_size')
-    plt.ylabel('error')
+    plt.xlabel('Dimension')
+    plt.ylabel('Error')
     upper_fn = func_name[0].upper() + func_name[1:]
     plt.title(upper_fn)
     plt.legend()
@@ -150,8 +150,8 @@ def plot_high_dim(cut, func_name):
     plt.plot(x, deap_ave, 'b-', label='DEAP')
     plt.xlim(xmin=0)
     plt.ylim(ymin=0)
-    plt.xlabel('budget')
-    plt.ylabel('error')
+    plt.xlabel('Budget')
+    plt.ylabel('Error')
     upper_fn = func_name[0].upper() + func_name[1:]
     plt.title(upper_fn)
     plt.legend()
@@ -165,21 +165,21 @@ def plot_high_dim(cut, func_name):
 if __name__ == '__main__':
     plot_low_dim(100, 'ackley', '20')
     plot_low_dim(100, 'sphere', '20')
-    plot_low_dim(100, 'griewank', '20')
-    plot_low_dim(100, 'rastrigin', '20')
-    plot_low_dim(100, 'schwefel', '20')
+    # plot_low_dim(100, 'griewank', '20')
+    # plot_low_dim(100, 'rastrigin', '20')
+    # plot_low_dim(100, 'schwefel', '20')
+    #
+    # plot_noisy(0, 'ackley', 200000, 0.1)
+    # plot_noisy(0, 'sphere', 200000, 1)
+    # plot_noisy(0, 'griewank', 200000, 1)
+    # plot_noisy(0, 'rastrigin', 40000, 20)
+    # plot_noisy(0, 'schwefel', 40000, 20)
 
-    plot_noisy(25000, 'ackley', 200000, 0.1)
-    plot_noisy(25000, 'sphere', 200000, 1)
-    plot_noisy(25000, 'griewank', 200000, 1)
-    plot_noisy(25000, 'rastrigin', 200000, 1)
-    plot_noisy(25000, 'schwefel', 200000, 1)
-
-    plot_scale('ackley')
-    plot_scale('sphere')
-    plot_scale('griewank')
-    plot_scale('rastrigin')
-    plot_scale('schwefel')
+    # plot_scale('ackley')
+    # plot_scale('sphere')
+    # plot_scale('griewank')
+    # plot_scale('rastrigin')
+    # plot_scale('schwefel')
 
     # plot_high_dim(0, 'ackley')
     # plot_high_dim(0, 'sphere')

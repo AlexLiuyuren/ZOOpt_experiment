@@ -1,5 +1,5 @@
-from mytest.test_func import cnt, add_cnt, get_cnt
+import numpy as np
 
-for i in range(10):
-    add_cnt()
-    get_cnt()
+a = np.array([[1, 2], [3, 4]])
+save_name = 'test/test.txt'
+np.savetxt(save_name, a)

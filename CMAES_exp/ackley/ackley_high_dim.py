@@ -27,6 +27,6 @@ if __name__ == '__main__':
         print('repeat', i)
         sol = minimize_ackley()
     all_epoch = np.array(get_all_epoch())
-    np.savetxt('CMAES_exp/log/ackley_high_dim.txt', all_epoch)
+    np.savetxt('CMAES_exp/log/ackley/ackley_10000.txt', all_epoch)
     print(all_epoch.shape)
 

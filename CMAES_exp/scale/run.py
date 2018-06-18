@@ -1,6 +1,6 @@
 from objective_function.base_function import set_optimal_position
 from objective_function.ordinary_function import sphere_for_cmaes, ackley_for_cmaes, griewank_for_cmaes, \
-    rastrigin_for_cmaes, schwefel_for_cmaes, get_epoch_cnt, clear_all, set_epoch_len
+    rastrigin_for_cmaes, schwefel_for_cmaes, get_epoch_cnt, clear_all, set_epoch_len, get_epoch_len
 import numpy as np
 import cma
 
@@ -30,23 +30,26 @@ def exp(func_no, dim_no):
         solutions = es.ask()
         es.tell(solutions, [func_list[func_no](x) for x in solutions])
         es.logger.add()
+    len = get_epoch_len()
+    print(len)
     clear_all()
     sol = es.result_pretty().fbest
+    print(es.result_pretty())
     return sol
 
 
 if __name__ == '__main__':
-    repeat = 5
-    for func_no in range(len(func_list)):
-        print(get_save_txt(func_no))
-        func_result = []
-        for i in range(repeat):
-            dim_result = []
-            for j in range(len(dim_list)):
-                dim_result.append(exp(func_no, j))
-            func_result.append(dim_result)
-            print(i)
-        np.savetxt(get_save_txt(func_no), np.array(func_result))
+    # repeat = 5
+    # for func_no in range(len(func_list)):
+    #     print(get_save_txt(func_no))
+    #     func_result = []
+    #     for i in range(repeat):
+    #         dim_result = []
+    #         for j in range(len(dim_list)):
+    #             dim_result.append(exp(func_no, j))
+    #         func_result.append(dim_result)
+    #         print(i)
+    #     np.savetxt(get_save_txt(func_no), np.array(func_result))
     # repeat = 1
     # func_result = []
     # func_no_list = [3, 4]
@@ -59,4 +62,4 @@ if __name__ == '__main__':
     #         func_result.append(dim_result)
     #         print(i)
     #     np.savetxt(get_save_txt(func_no), np.array(func_result))
-
+    exp(1, 1)

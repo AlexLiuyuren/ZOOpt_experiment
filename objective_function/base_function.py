@@ -114,6 +114,6 @@ def schwefel_high(x):
     value1 = schwefel(x1)
     value2 = 0
     for i in range(len(x2)):
-        value2 += (x2[i] - optimal_position[i + 10]) * (x2[i] - optimal_position[i + 10])
-    value2 /= len(x) * len(x)
+        value2 += (x2[i] - 420.9687) * (x2[i] - 420.9687)
+    value2 /= (len(x) * len(x))
     return value1 + value2

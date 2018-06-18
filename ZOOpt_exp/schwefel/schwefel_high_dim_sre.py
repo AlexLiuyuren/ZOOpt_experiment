@@ -12,7 +12,7 @@ if __name__ == '__main__':
     set_optimal_position(
         "objective_function/optimal_position/schwefel/schwefel_10000.txt")
     gl.set_seed(666)
-    dim_lim = 5
+    dim_lim = 500
     for i in range(repeat_num):
         dim_size = 10000  # dimensions
         dim_regs = [[-1 * dim_lim, dim_lim]] * dim_size  # dimension range

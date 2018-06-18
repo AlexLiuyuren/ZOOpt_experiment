@@ -3,7 +3,7 @@ from objective_function.base_function import set_optimal_position
 import numpy as np
 import cma
 
-dim_size = 100
+dim_size = 20
 dim_lim = 500
 
 
@@ -21,9 +21,9 @@ def minimize_schwefel():
 
 if __name__ == '__main__':
     set_optimal_position(
-        "objective_function/optimal_position/schwefel/schwefel_100.txt")
+        "objective_function/optimal_position/schwefel/schwefel_20.txt")
     repeat = 10
-    set_epoch_len(200000)
+    set_epoch_len(40000)
     for i in range(repeat):
         sol = minimize_schwefel()
     all_epoch = np.array(get_all_epoch())

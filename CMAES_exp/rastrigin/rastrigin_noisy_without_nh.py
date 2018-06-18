@@ -3,7 +3,7 @@ from objective_function.base_function import set_optimal_position
 import numpy as np
 import cma
 
-dim_size = 100
+dim_size = 20
 dim_lim = 5
 
 

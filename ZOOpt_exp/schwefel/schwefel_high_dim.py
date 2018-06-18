@@ -12,7 +12,7 @@ if __name__ == '__main__':
     gl.set_seed(666)
     budget = 10000
     set_epoch_len(budget)
-    dim_lim = 5
+    dim_lim = 500
     for i in range(repeat_num):
         dim_size = 10000  # dimensions
         dim_regs = [[-1 * dim_lim, dim_lim]] * dim_size  # dimension range

@@ -15,6 +15,10 @@ def set_epoch_len(l):
     epoch_len = l
 
 
+def get_epoch_len():
+    return len(epoch)
+
+
 def get_all_epoch():
     return all_epoch
 

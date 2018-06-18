@@ -10,9 +10,9 @@ from deap import creator
 from deap import tools
 
 
-dim_size = 100
-dim_lim = 10
-speed_lim = 2
+dim_size = 20
+dim_lim = 500
+speed_lim = 50
 
 creator.create("FitnessMin", base.Fitness, weights=(-1.0, ))
 creator.create("Particle", list, fitness=creator.FitnessMin, speed=list,
@@ -59,7 +59,7 @@ def minimize_schwefel_continuous_noisy():
     logbook = tools.Logbook()
     logbook.header = ["gen", "evals"] + stats.fields
 
-    GEN = int(200000 / population)
+    GEN = int(40000 / population)
     best = None
     i = 0
     for g in range(GEN):
@@ -84,9 +84,9 @@ def minimize_schwefel_continuous_noisy():
 
 if __name__ == "__main__":
     set_optimal_position(
-        'objective_function/optimal_position/schwefel/schwefel_100.txt')
+        'objective_function/optimal_position/schwefel/schwefel_20.txt')
     repeat = 10
-    set_epoch_len(200000)
+    set_epoch_len(40000)
     for i in range(repeat):
         minimize_schwefel_continuous_noisy()
     all_epoch = np.array(get_all_epoch())

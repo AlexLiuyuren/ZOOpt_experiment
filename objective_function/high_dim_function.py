@@ -24,6 +24,7 @@ def get_epoch_cnt():
 
 
 def function_high_log(func_high, x):
+    print(len(epoch))
     result = func_high(x)
     global all_epoch, epoch, pcount, epoch_cnt, best_result
     if result < best_result:
@@ -59,23 +60,23 @@ def schwefel_high_log(x):
 
 
 def sphere_high_for_cmaes(x):
-    return func_for_cmaes(sphere_high, 1, x)
+    return func_for_cmaes(sphere_high_log, 1, x)
 
 
 def ackley_high_for_cmaes(x):
-    return func_for_cmaes(ackley_high, 1, x)
+    return func_for_cmaes(ackley_high_log, 1, x)
 
 
 def rastrigin_high_for_cmaes(x):
-    return func_for_cmaes(rastrigin_high, 5, x)
+    return func_for_cmaes(rastrigin_high_log, 5, x)
 
 
 def griewank_high_for_cmaes(x):
-    return func_for_cmaes(griewank_high, 10, x)
+    return func_for_cmaes(griewank_high_log, 10, x)
 
 
 def schwefel_high_for_cmaes(x):
-    return func_for_cmaes(schwefel_high, 500, x)
+    return func_for_cmaes(schwefel_high_log, 500, x)
 
 
 def clear_noisy_global():

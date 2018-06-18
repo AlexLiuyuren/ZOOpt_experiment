@@ -14,8 +14,8 @@ creator.create("FitnessMin", base.Fitness, weights=(-1.0,))
 creator.create("Particle", list, fitness=creator.FitnessMin, speed=list,
     smin=None, smax=None, best=None)
 dim_size = 20
-dim_lim = 10
-speed_lim = 2
+dim_lim = 500
+speed_lim = 50
 
 
 def generate(size, pmin, pmax, smin, smax):
