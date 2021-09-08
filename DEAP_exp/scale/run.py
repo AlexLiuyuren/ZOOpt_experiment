@@ -1,22 +1,11 @@
-from objective_function.base_function import set_optimal_position, sphere, ackley, griewank, rastrigin, schwefel
+import os, sys, random, argparse, configparser, operator
+project_dir = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
+print(project_dir)
+sys.path.append(project_dir)
+from objective_function.low_dim_function import function_dict
+from objective_function.base_function import set_optimal_position, append_all_epoch, get_all_epoch, get_cnt, clear_epoch, epoch_first_items
+from deap import base, benchmarks, creator, tools
 import numpy as np
-from deap import base
-from deap import benchmarks
-from deap import creator
-from deap import tools
-import random
-import operator
-
-
-dim_list = [20, 200, 400, 600, 800, 1000]
-func_list = [sphere, ackley, griewank, rastrigin, schwefel]
-func_name = ['sphere', 'ackley', 'griewank', 'rastrigin', 'schwefel']
-search_list = [1, 1, 10, 5, 500]
-speed_list = [0.2, 0.2, 2, 1, 100]
-
-creator.create("FitnessMin", base.Fitness, weights=(-1.0,))
-creator.create("Particle", list, fitness=creator.FitnessMin, speed=list,
-    smin=None, smax=None, best=None)
 
 
 def generate(size, pmin, pmax, smin, smax):
@@ -41,68 +30,67 @@ def updateParticle(part, best, phi1, phi2):
     part[:] = list(map(operator.add, part, part.speed))
 
 
-def get_optimal_txt(func_no, dim_no):
-    txt = "objective_function/optimal_position/" + func_name[func_no] + "/" + func_name[func_no] + '_' \
-          + str(dim_list[dim_no]) + '.txt'
-    return txt
 
+def minimize(func_name):
+    config = configparser.ConfigParser()
+    config_name = os.path.join(project_dir, 'objective_function/config/scale.ini')
+    config.read(config_name, encoding='utf-8')
+    print(config.sections())
 
-def get_save_txt(func_no):
-    txt = 'DEAP_exp/log/' + func_name[func_no] + "/" + func_name[func_no] + '_scale.txt'
-    return txt
+    optimal_position_address_dir = os.path.join(project_dir,  "objective_function/optimal_position")
+    dim_list = eval(config.get(func_name, 'dim_list'))
+    dim_regs = eval(config.get(func_name, 'dim_regs'))
 
+    repeat = 30
+    values = np.zeros((repeat, len(dim_list)))
+    seed = 0
+    random.seed(seed)
+    np.random.seed(seed)
+    speed_lim = dim_regs[1]/5
 
-def exp(func_no, dim_no):
-    set_optimal_position(get_optimal_txt(func_no, dim_no))
-    init_pos = [np.random.uniform(-search_list[func_no], search_list[func_no]) for _ in range(dim_list[dim_no])]
-    toolbox = base.Toolbox()
-    toolbox.register("particle", generate, size=dim_list[dim_no], pmin=-search_list[func_no], pmax=search_list[func_no],
-                     smin=-speed_list[func_no], smax=speed_list[func_no])
-    toolbox.register("population", tools.initRepeat, list, toolbox.particle)
-    toolbox.register("update", updateParticle, phi1=1.0, phi2=1.0)
-    toolbox.register("evaluate", lambda x: (func_list[func_no](x),))
-    fmin = []
-    population = 20
-    pop = toolbox.population(n=population)
-    stats = tools.Statistics(lambda ind: ind.fitness.values)
-    stats.register("avg", np.mean)
-    stats.register("std", np.std)
-    stats.register("min", np.min)
-    stats.register("max", np.max)
+    for i in range(repeat):
+        for j in range(len(dim_list)):
+            dim_size = dim_list[j]
+            creator.create("FitnessMin", base.Fitness, weights=(-1.0,))
+            creator.create("Particle", list, fitness=creator.FitnessMin, speed=list, smin=None, smax=None, best=None)
+            toolbox = base.Toolbox()
+            toolbox.register("particle", generate, size=dim_size, pmin=dim_regs[0], pmax=dim_regs[1], smin=-speed_lim, smax=speed_lim)
+            toolbox.register("population", tools.initRepeat, list, toolbox.particle)
+            toolbox.register("update", updateParticle, phi1=2.0, phi2=2.0)
+            toolbox.register("evaluate", lambda x: (function_dict[func_name](x), ))
 
-    logbook = tools.Logbook()
-    logbook.header = ["gen", "evals"] + stats.fields
+            optimal_position_address = os.path.join(optimal_position_address_dir, func_name, "{}_{}.txt".format(func_name, dim_size))
+            budget = dim_size * 100
+            set_optimal_position(optimal_position_address)
+            population = 10
+            pop = toolbox.population(n=population)
 
-    budget = dim_list[dim_no] * 100
-    GEN = int(budget / population)
-    best = None
-    i = 0
-    for g in range(GEN):
-        for part in pop:
-            part.fitness.values = toolbox.evaluate(part)
-            if not part.best or part.best.fitness < part.fitness:
-                part.best = creator.Particle(part)
-                part.best.fitness.values = part.fitness.values
-            if not best or best.fitness < part.fitness:
-                best = creator.Particle(part)
-                best.fitness.values = part.fitness.values
-        for part in pop:
-            toolbox.update(part, best)
-        logbook.record(gen=g, evals=len(pop), **stats.compile(pop))
-        fmin.append(min(logbook.select("min")))
-    return min(fmin)
-
+            best = None
+            while get_cnt() < budget:
+                for part in pop:
+                    part.fitness.values = toolbox.evaluate(part)
+                    if not part.best or part.best.fitness < part.fitness:
+                        part.best = creator.Particle(part)
+                        part.best.fitness.values = part.fitness.values
+                    if not best or best.fitness < part.fitness:
+                        best = creator.Particle(part)
+                        best.fitness.values = part.fitness.values
+                for part in pop:
+                    toolbox.update(part, best)
+            values[i, j] = best.fitness.values[0]
+            clear_epoch()
+            print("finist repeat: {}, dim: {}, best f: {}".format(i, dim_size, best.fitness.values))
+    log_address = os.path.join(project_dir, 'DEAP_exp/log/scale/')
+    file_name = os.path.join(log_address, '{}.txt'.format(obj_name))
+    os.makedirs(log_address, exist_ok=True)
+    np.savetxt(file_name, values)
+    # print(values)
 
 if __name__ == '__main__':
-    repeat = 10
-    for func_no in range(len(func_list)):
-        # print(get_save_txt(func_no))
-        func_result = []
-        for i in range(repeat):
-            dim_result = []
-            for j in range(len(dim_list)):
-                value = exp(func_no, j)
-                print(value)
-                dim_result.append(value)
-            func_result.append(dim_result)
-        np.savetxt(get_save_txt(func_no), np.array(func_result))
+    parser = argparse.ArgumentParser()
+    parser.add_argument('-o', '--objective', default='ackley', help='only support ackley, sphere, rastrigin and schwefel')
+    args = parser.parse_args()
+    obj_name = args.objective
+    minimize(obj_name)
+    
+    

@@ -1,87 +1,77 @@
 import numpy as np
-from objective_function.base_function import sphere_high, ackley_high, griewank_high, rastrigin_high, schwefel_high
-from objective_function.ordinary_function import func_for_cmaes
+import os, sys
+project_dir = os.path.dirname(os.path.dirname(__file__))
+print(project_dir)
+sys.path.append(project_dir)
+from objective_function.base_function import sphere, ackley, griewank, rastrigin, schwefel, function_log, get_optimal_position, func_for_cmaes
 
-all_epoch = []
-epoch = []
-epoch_cnt = 0
-pcount = 0
-epoch_len = 10000
-best_result = np.inf
-
-
-def set_epoch_len(l):
-    global epoch_len
-    epoch_len = l
-
-
-def get_all_epoch():
-    return all_epoch
-
-
-def get_epoch_cnt():
-    return epoch_cnt
+def function_high(func, x):
+    """
+        Variant of the func function. Dimensions except the first 10 ones have limited 
+        impact on the function value.
+    """
+    x1 = x[:10]
+    x2 = x[10:]
+    value1 = func(x1)
+    value2 = 0
+    optimal_position = get_optimal_position()
+    for i in range(len(x2)):
+        value2 += (x2[i] - optimal_position[i + 10]) * (x2[i] - optimal_position[i + 10])
+    value2 /= len(x)
+    return value1 + value2
 
 
-def function_high_log(func_high, x):
-    print(len(epoch))
-    result = func_high(x)
-    global all_epoch, epoch, pcount, epoch_cnt, best_result
-    if result < best_result:
-        epoch.append(result)
-        best_result = result
-    else:
-        epoch.append(epoch[-1])
-    pcount += 1
-    if pcount == epoch_len:
-        all_epoch.append(epoch[:epoch_len])
-        epoch_cnt += 1
-    return result
+def sphere_high(x): return function_high(sphere, x)
+def ackley_high(x): return function_high(ackley, x)
+def rastrigin_high(x): return function_high(rastrigin, x)
+def griewank_high(x): return function_high(griewank, x)
 
+def schwefel_high(x):
+    x1 = x[:10]
+    x2 = x[10:]
+    value1 = schwefel(x1)
+    if value1 < 0:
+        print(x1)
+        value2 = 0
+        for i in range(len(x2)):
+            value2 += (x2[i] - 420.9687) * (x2[i] - 420.9687)
+        print(value2)
+    assert(value1 >= 0)
+    value2 = 0
+    for i in range(len(x2)):
+        value2 += (x2[i] - 420.9687) * (x2[i] - 420.9687)
+    assert(value2 > 0)
+    value2 /= (len(x) * len(x))
+    return value1 + value2
 
-def sphere_high_log(x):
-    return function_high_log(sphere_high, x)
+def high_dim_sphere_log(x): return function_log(sphere_high, x)
+def high_dim_ackley_log(x): return function_log(ackley_high, x)
+def high_dim_rastrigin_log(x): return function_log(rastrigin_high, x)
+def high_dim_griewank_log(x): return function_log(griewank_high, x)
+def high_dim_schwefel_log(x): return function_log(schwefel_high, x)
 
+high_dim_function_dict = {
+    'ackley': high_dim_ackley_log,
+    'sphere': high_dim_sphere_log,
+    'rastrigin': high_dim_rastrigin_log,
+    'griewank': high_dim_griewank_log,
+    'schwefel': high_dim_schwefel_log   
+}
 
-def ackley_high_log(x):
-    return function_high_log(ackley_high, x)
+def high_dim_sphere_for_cmaes(x): return func_for_cmaes(high_dim_sphere_log, 1, x)
+def high_dim_ackley_for_cmaes(x): return func_for_cmaes(high_dim_ackley_log, 1, x)
+def high_dim_rastrigin_for_cmaes(x): return func_for_cmaes(high_dim_rastrigin_log, 5, x)
+def high_dim_griewank_for_cmaes(x): return func_for_cmaes(high_dim_griewank_log, 10, x)
+def high_dim_schwefel_for_cmaes(x): return func_for_cmaes(high_dim_schwefel_log, 500, x)
 
+high_dim_function_cmaes_dict = {
+    'sphere': high_dim_sphere_for_cmaes,
+    'ackley': high_dim_ackley_for_cmaes,
+    'griewank': high_dim_griewank_for_cmaes,
+    'rastrigin': high_dim_rastrigin_for_cmaes,
+    'schwefel': high_dim_schwefel_for_cmaes
+}
 
-def rastrigin_high_log(x):
-    return function_high_log(rastrigin_high, x)
-
-
-def griewank_high_log(x):
-    return function_high_log(griewank_high, x)
-
-
-def schwefel_high_log(x):
-    return function_high_log(schwefel_high, x)
-
-
-def sphere_high_for_cmaes(x):
-    return func_for_cmaes(sphere_high_log, 1, x)
-
-
-def ackley_high_for_cmaes(x):
-    return func_for_cmaes(ackley_high_log, 1, x)
-
-
-def rastrigin_high_for_cmaes(x):
-    return func_for_cmaes(rastrigin_high_log, 5, x)
-
-
-def griewank_high_for_cmaes(x):
-    return func_for_cmaes(griewank_high_log, 10, x)
-
-
-def schwefel_high_for_cmaes(x):
-    return func_for_cmaes(schwefel_high_log, 500, x)
-
-
-def clear_noisy_global():
-    global epoch, pcount, epoch_cnt, best_result
-    epoch = []
-    best_result = np.inf
-    pcount = 0
-    epoch_cnt = 0
+if __name__ == '__main__':
+    x =  [-0.8533454208895921, 484.1863579927998, -468.2074832322618, -466.0903303154482, 395.0905281703499, -336.8235319970066, -323.49042323914193, 32.316025340673036, 62.87115862180781, -453.5690082532268, -280.9948421336559]
+    print(high_dim_function_dict['schwefel'](x))

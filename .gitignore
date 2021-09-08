@@ -1,3 +1,15 @@
 *.py[cod]
-.idea/*
+.idea
 *.dat
+outcmaes/*
+pycma_exp/high_dim/outcmaes
+pycma_exp/low_dim/outcmaes
+pycma_exp/noisy/outcmaes
+IMGPO
+scikitopt_exp
+time
+.vscode
+*.DS_Store
+ZOOpt-master-2/*
+merge_noisy.py
+merge_scale.py

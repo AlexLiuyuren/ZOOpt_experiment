@@ -1,6 +1,13 @@
 import numpy as np
-optimal_position = []
+import gc
 
+global optimal_position, all_epoch, epoch, best_result
+optimal_position = []
+all_epoch = []
+epoch = []
+best_result = np.inf
+best_sol = []
+cnt = 0
 
 def set_optimal_position(filename):
     global optimal_position
@@ -9,14 +16,21 @@ def set_optimal_position(filename):
         optimal_position = eval(lines[0])
     return optimal_position
 
+def get_optimal_position():
+    global optimal_position
+    return optimal_position
+
+def get_cnt():
+    global cnt
+    return cnt
 
 def sphere(x):
     """
         Sphere function.
     """
     # print(len(optimal_position))
-    assert len(x) == len(optimal_position)
     value = 0
+    optimal_position = get_optimal_position()
     for i in range(len(x)):
         value += (x[i] - optimal_position[i]) * (x[i] - optimal_position[i])
     return value
@@ -29,7 +43,7 @@ def ackley(x):
     x_len = len(x)
     seq = 0
     cos = 0
-
+    optimal_position = get_optimal_position()
     for i in range(x_len):
         seq += (x[i] - optimal_position[i]) * (x[i] - optimal_position[i])
         cos += np.cos(2.0 * np.pi * (x[i] - optimal_position[i]))
@@ -46,6 +60,7 @@ def rastrigin(x):
     x_len = len(x)
     seq = 0
     cos = 0
+    optimal_position = get_optimal_position()
     for i in range(x_len):
         seq += (x[i] - optimal_position[i]) * (x[i] - optimal_position[i])
         cos += np.cos(2.0 * np.pi * (x[i] - optimal_position[i]))
@@ -63,7 +78,6 @@ def schwefel(x):
         value += x[i] * np.sin(np.sqrt(np.abs(x[i])))
     return 418.9829 * x_len - value
 
-
 def griewank(x):
     """
         griewank function
@@ -71,49 +85,93 @@ def griewank(x):
     x_len = len(x)
     seq = 0
     cos = 1
+    optimal_position = get_optimal_position()
     for i in range(x_len):
         seq += (x[i] - optimal_position[i]) * (x[i] - optimal_position[i])
         cos *= np.cos((x[i] - optimal_position[i]) / np.sqrt(i+1))
     value = seq / 4000.0 - cos + 1
     return value
 
+base_function_dict = {
+    'sphere': sphere,
+    'ackley': ackley,
+    'rastrigin': rastrigin,
+    'griewank': griewank,
+    'schwefel': schwefel
+}
 
-def function_high(func, x):
-    """
-        Variant of the func function. Dimensions except the first 10 ones have limited impact on the function value.
-    """
-    x1 = x[:10]
-    x2 = x[10:]
-    value1 = func(x1)
-    value2 = 0
-    for i in range(len(x2)):
-        value2 += (x2[i] - optimal_position[i + 10]) * (x2[i] - optimal_position[i + 10])
-    value2 /= len(x)
-    return value1 + value2
+def function_log(func, x):
+    result = func(x)
+    global cnt
+    cnt += 1
+    best_result = get_best_result()
+    if result < best_result:
+        append_epoch(result)
+        update_best_result(x, result)
+    else:
+        append_epoch_with_last_item()
+    return result
 
+def func_for_cmaes(func, lim, x):
+    x = np.where(x > lim, lim, x)
+    x = np.where(x < -lim, -lim, x)
+    return func(x)
 
-def sphere_high(x):
-    return function_high(sphere, x)
+def get_best_result():
+    global best_result
+    return best_result
 
+def append_all_epoch():
+    global all_epoch, epoch
+    all_epoch.append(epoch)
+    clear_epoch()
 
-def ackley_high(x):
-    return function_high(ackley, x)
+def append_epoch(result):
+    global epoch
+    epoch.append(result)
 
+def append_epoch_with_last_item():
+    global epoch
+    assert len(epoch) > 0
+    epoch.append(epoch[-1])
 
-def rastrigin_high(x):
-    return function_high(rastrigin, x)
+def update_best_result(sol, result):
+    global best_result, best_sol
+    best_sol = sol
+    best_result = result
 
+def get_all_epoch():
+    global all_epoch
+    return all_epoch
+    
+def clear_epoch():
+    global epoch, best_result, best_sol, cnt
+    epoch = []
+    best_result = np.inf
+    best_sol = []
+    cnt =0
 
-def griewank_high(x):
-    return function_high(griewank, x)
+def get_epoch():
+    global epoch
+    return epoch
 
+def epoch_first_items(num):
+    global epoch
+    epoch = epoch[:num]
+    return  epoch
 
-def schwefel_high(x):
-    x1 = x[:10]
-    x2 = x[10:]
-    value1 = schwefel(x1)
-    value2 = 0
-    for i in range(len(x2)):
-        value2 += (x2[i] - 420.9687) * (x2[i] - 420.9687)
-    value2 /= (len(x) * len(x))
-    return value1 + value2
+def clear_all_epoch():
+    global epoch, best_result, all_epoch, cnt
+    epoch = []
+    all_epoch = []
+    best_result = np.inf
+    cnt = 0
+    gc.collect()
+
+def get_best_sol():
+    global best_sol
+    return best_sol
+
+def set_best_sol(sol):
+    global best_sol
+    best_sol = sol
